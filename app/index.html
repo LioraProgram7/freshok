@@ -1,15 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Фрешок Онлайн-Маркет|Главная страница</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
+
+  <header class="header">
+    <!-- <h1 class="sr__only">Фрешок Онлайн-Маркет</h1> -->
+    <div class="header__top">
+      <div class="container">
+
+        <nav class="header__top-inner">
+          <div class="header__top-info">
+            <a class="header__top-link header__top-link--address" href="#">АДРЕС И ВРЕМЯ ДОСТАВКИ</a>
+            <a class="header__top-link header__top-link--tel" href="tel:+7907288365">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
+          </div>
+
+          <div class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">ДОСТАВКА</a>
+              </li>
+
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">О НАС</a>
+              </li>
+
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">НОВОСТИ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-inner">
+
+          <a class="header__bottom-logo" href="#">
+            <img class="logo__images" src="images/logo.svg" alt="логотип" width="200px;height="60px">
+          </a>
+
+          <button class="header__bottom-btn">Каталог продуктов</button>
+
+          <form class="header__search" action="#">
+            <div class="header__search-block">
+              <input class="header__search-input" 
+              name="search" type="search" aria-label="Найти в магазине"
+              required placeholder="Найти в магазине ...">
+            </div>
+            <button class="header__search-btn btn-black" type="submit">ПОИСК</button>
+          </form>
+
+          <ul class="header__user-nav">
+            <li class="header__user-item">
+              <a class="header__user-link header__user-link--icon-user" href="#" aria-label="личный кабинет"></a>
+            </li>
+
+             <li class="header__user-item">
+               <a class="header__user-link header__user-link--icon-heart" href="#" aria-label="избранное">
+                 <span class="header__user-num">12</span>
+               </a>
+             </li>
+
+              <li class="header__user-item">
+                <a class="header__user-link header__user-link--icon-cart" href="#" aria-label="корзина"></a>
+                <span class="header__user-num">12</span>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
 
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
