@@ -6,10 +6,15 @@ $dark-800: #31352B;
 $dark-500: #505050;
 $red-900: #CF3E3B;
 $orange-900: #FF7A00;
-$yellow-900: #FFB800;
+$yellow-900: #FFB800;   
 $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
+
+%border-bottom {
+  border-bottom: 1px solid #fff;
+  opacity: 0.1;
+}
 
 %opensans-400 {
   font-family: 'OpenSans-Regular', sans-serif;
