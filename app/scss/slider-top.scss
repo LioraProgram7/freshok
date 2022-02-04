@@ -1,11 +1,11 @@
 .slider-top {
-
-  &__item { 
+  &__item {
     padding: 142px 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 306px);     
+    height: calc(100vh - 160px);     
+    // height: 600px;
   }
 
   &__content {
@@ -18,16 +18,16 @@
 
   &__top-title {
     color: $dark-500;
+    max-width: 950px;
+    width: 100%;
   }
-   
 
+  // шрифт не такой как на макете, переутановила шрифты, но все ровно не такой, жирнее
   &__title {
     @extend %ruda-900;
     font-size: 60px;
     line-height: 1.3;
     text-transform: uppercase;
-     max-width: 833px;
-     width: 100%;
     padding-bottom: 12px;
   }
 
@@ -40,10 +40,27 @@
     line-height: 1.4;
     padding-bottom: 32px;
   }
-
-  &__container {
-  
-  }
 }
 
+.slick-prev,
+.slick-next {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: perspective(-50%);
+  z-index: 5;
 
+}
+
+.slick-prev {
+  left: 0;
+  padding-left: 60px;
+}
+
+.slick-next {
+  right: 0;
+  padding-right: 60px;
+}

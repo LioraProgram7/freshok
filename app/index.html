@@ -12,8 +12,7 @@
 <body>
 
   <header class="header">
-    <!-- не понима почему не пропадает, свойства в цсс задала ему -->
-    <!-- <h1 class="sr__only">Фрешок Онлайн-Маркет</h1> -->
+    <h1 class="sr-only">Фрешок Онлайн-Маркет</h1>
     <div class="header__top">
       <div class="container">
 
@@ -87,7 +86,7 @@
 
 
   <main class="main">
-    <div class="slider-top">
+    <section class="slider-top">
       <div class="slider-top__inner">
 
         <div class="slider-top__item" style=" background-image: url('images/slider/top-slider1.jpg');">
@@ -130,17 +129,45 @@
               <div class="slider-top__top-title">
                 <h1 class="slider-top__title">
                   Пусть остальные позеленеют от зависти
-                  <span>Распродажа зелени</span>
+                  <span class="slider-top__subtitle">Распродажа зелени</span>
                 </h1>
               </div>
               <a class="slider-top__btn btn" href="#">Купить сейчас</a>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-    </div>
+    </section>
+
+    <section class="service">
+      <div class="container">
+
+        <ul class="service__inner">
+          <li class="service__item service__item--scooter">
+            <h2 class="service__item-title">Бесплатная доставка</h2>
+            <p class="service__item-text">
+              Для заказов на сумму от 500 ₽
+            </p>
+          </li>
+
+          <li class="service__item service__item--box">
+            <h2 class="service__item-title">Возврат товара</h2>
+            <p class="service__item-text">
+              Если товары были испорчены
+            </p>
+          </li>
+
+          <li class="service__item service__item--24-hours">
+            <h2 class="service__item-title">Поддержка 24/7</h2>
+            <p class="service__item-text">
+              Лучшие операторы
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    
   </main>
 
 
