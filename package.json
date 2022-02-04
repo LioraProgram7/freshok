@@ -20,6 +20,8 @@
     "sass": "^1.49.0"
   },
   "dependencies": {
-    "gulp-imagemin": "^7.1.0"
+    "gulp-imagemin": "^7.1.0",
+    "install": "^0.13.0",
+    "slick-carousel": "^1.8.1"
   }
 }

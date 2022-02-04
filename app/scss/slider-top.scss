@@ -1,0 +1,49 @@
+.slider-top {
+
+  &__item { 
+    padding: 142px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 306px);     
+  }
+
+  &__content {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top-title {
+    color: $dark-500;
+  }
+   
+
+  &__title {
+    @extend %ruda-900;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+     max-width: 833px;
+     width: 100%;
+    padding-bottom: 12px;
+  }
+
+  &__subtitle {
+    color: $red-900;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.4;
+    padding-bottom: 32px;
+  }
+
+  &__container {
+  
+  }
+}
+
+

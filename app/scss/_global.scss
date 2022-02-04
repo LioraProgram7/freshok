@@ -48,3 +48,15 @@ body {
   cursor: pointer;
   border: none;
 }
+
+.btn {
+  background-color: $green-900;
+  max-width: 181px;
+  width: 100%;
+  height: 47px;
+  color: $white;
+  font-size: 18px;
+  line-height: 1.3;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
