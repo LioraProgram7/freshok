@@ -60,3 +60,18 @@ body {
   padding: 12px 24px;
   border-radius: 6px;
 }
+
+.title {
+  @extend %ruda-600;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.product-item {
+  
+
+
+}

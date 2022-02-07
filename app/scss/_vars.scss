@@ -60,3 +60,15 @@ $white: #FFFFFF;
   border-bottom: 1px solid #fff;
   opacity: 0.1;
 }
+
+%none-btn {
+   border: none;
+   padding: 0;
+   background-color: transparent;
+}
+
+%bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

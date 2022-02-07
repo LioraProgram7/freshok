@@ -25,6 +25,11 @@
     }
   }
 
+  &__item:not(:last-child) {
+    margin-right: -145px;
+
+  }
+
   &__item--scooter::before {
     background-image: url(../images/service-scooter.svg);
   }
