@@ -5,8 +5,10 @@ $(function () {
     nextArrow: '<button type="button" class="slick-next"><img src="images/arrow-right.svg" alt=""></button>',
 
     // autoplay: true,
-    // autoplaySpead: 2000
+    // autoplaySpead: 2000 отключила чтобы не мешало
 
   });
+
+  var mixer = mixitup('.product__items');
 
 });

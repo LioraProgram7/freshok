@@ -42,9 +42,7 @@
     content: '';
     position: absolute;
     height: 22px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @extend %bg-img;
   }
 
   &__top-link--address::before {
@@ -93,9 +91,7 @@
     height: 17px;
     top: 16px;
     left: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @extend %bg-img;
     cursor: pointer;
   }
 
@@ -107,9 +103,7 @@
     height: 7.23px;
     top: 21px;
     left: 207.12px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @extend %bg-img;
     cursor: pointer;
   }
 
@@ -130,9 +124,8 @@
     height: 20px;
     top: 16px;
     left: 13px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @extend %bg-img;
+    cursor: pointer;
 
     //  тут тоже не получается сделать стайлгайд
     &:hover {
@@ -168,9 +161,8 @@
     padding-right: 31px;
     width: 32px;
     height: 32px;
+    @extend %bg-img;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     transition: opacity 0.5s;
 
     // padding: 11px 15px;
@@ -239,6 +231,4 @@
       border-radius: 3px;
     }
   }
-
-
 }

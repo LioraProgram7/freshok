@@ -123,9 +123,7 @@
       height: 29px;
       top: -13px;
       right: -11px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      @extend %bg-img;
     }
   }
 
