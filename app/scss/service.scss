@@ -22,10 +22,9 @@
       left: 0;
     }
   }
-
+//не выходит расставить как на макете по перфекту
   &__item:not(:last-child) {
     margin-right: -145px;
-
   }
 
   &__item--scooter::before {

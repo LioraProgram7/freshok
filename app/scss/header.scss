@@ -58,19 +58,24 @@
     top: -3px;
     left: -33px;
   }
+}
 
-  &__bottom {
+  .header-bottom {
     background-color: $green-900;
-  }
+  
 
-  &__bottom-inner {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 25px 0;
   }
 
-  &__bottom-btn {
+  &__logo {
+    margin-right: -47px;
+  }
+
+  &__btn {
     min-width: 240px;
     height: 50px;
     background-color: $white;
@@ -81,9 +86,10 @@
     padding: 15px 38px 15px 61px;
     position: relative;
     border: none;
+    margin-right: -42px;
   }
 
-  &__bottom-btn::before {
+  &__btn::before {
     content: '';
     position: absolute;
     background-image: url(../images/icons/nav_icon.svg);
@@ -95,7 +101,7 @@
     cursor: pointer;
   }
 
-  &__bottom-btn::after {
+  &__btn::after {
     content: '';
     position: absolute;
     background-image: url(../images/icons/icon-chevron.svg);
@@ -109,6 +115,7 @@
 
   &__search {
     display: flex;
+    margin-right: -12px;
   }
 
   &__search-block {
@@ -180,17 +187,17 @@
     }
   }
 
-  &__user-link--icon-user {
+  &__user-link--user {
     background-image: url(../images/icons/icon-user.svg);
     width: 25px;
   }
 
-  &__user-link--icon-heart {
+  &__user-link--heart {
     background-image: url(../images/icons/icon-heart.svg);
     height: 29px;
   }
 
-  &__user-link--icon-cart {
+  &__user-link--cart {
     background-image: url(../images/icons/icon-cart.svg);
     height: 31px;
   }
@@ -232,3 +239,4 @@
     }
   }
 }
+
