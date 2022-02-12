@@ -25,7 +25,7 @@ function browsersync() {
 function styles() {
   return src('app/scss/style.scss')
     .pipe(scss({
-      outputStyle: 'expanded'
+      outputStyle: 'compressed'
     }).on('error', scss.logError))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({

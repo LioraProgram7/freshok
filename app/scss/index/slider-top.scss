@@ -48,6 +48,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  transition: color 0.5s;
   z-index: 5;
 
   &:hover svg path {
@@ -80,8 +81,8 @@
 .slick-next {
   right: 0;
   padding-right: 60px;
-
 }
+
 .slick-disabled svg path {
   fill: #C1C1C1;
 }

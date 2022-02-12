@@ -21,7 +21,7 @@
     text-transform: uppercase;
     color: $dark-500;
     border-bottom: 3px solid transparent;
-    transition: border-bottom 0.5s;
+    transition: all 0.5s;
     cursor: pointer;
     border-bottom: transparent;
 
@@ -42,7 +42,7 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 31px 30px;
+    grid-gap: 30px;
     margin-bottom: 61px;
   }
 }
@@ -136,8 +136,6 @@
   }
 
   &__top {
-    // display: flex;
-    // justify-content: space-between;
     position: relative;
     height: 56px;
   }
@@ -149,7 +147,6 @@
     position: absolute;
     right: 9px;
     top: 15px;
-
 
     &:hover svg path {
       fill: #FFB800;
@@ -217,4 +214,3 @@
     }
   }
 }
-

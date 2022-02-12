@@ -30,7 +30,7 @@
     }
   }
 
-  &__top-link::before {
+  &__link::before {
     content: '';
     position: absolute;
     height: 22px;
@@ -39,12 +39,12 @@
     @extend %bg-img;
   }
 
-  &__top-link--address::before {
+  &__link--address::before {
     background-image: url(../images/icons/icon-address.svg);
     width: 32px;
   }
 
-  &__top-link--tel::before {
+  &__link--tel::before {
     background-image: url(../images/icons/icon-tel.svg);
     width: 22px;
   }
@@ -71,11 +71,14 @@
     border-radius: 6px;
     @extend %opensans-600;
     font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
     color: $green-900;
     padding: 15px 38px 15px 61px;
     position: relative;
     border: none;
     margin-right: -42px;
+    transition: background-color 0.5s;
 
     &:hover {
       background-color: #E0EDCF;
@@ -89,7 +92,6 @@
     position: absolute;
     @extend %bg-img;
   }
-
 
   &__btn::before {
     background-image: url(../images/icons/nav_icon.svg);
@@ -106,7 +108,6 @@
     top: 21px;
     right: 18px;
     background-size: auto;
-
   }
 
   &__search {
@@ -114,32 +115,34 @@
     margin-right: -8px;
   }
 
-  &__search-block {
-    position: relative;
-    transition: 0.5s;
-  }
-
-  &__search-block::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/icons/vector.svg);
-    width: 20px;
-    height: 20px;
-    top: 16px;
-    left: 13px;
-    @extend %bg-img;
-  }
-
   &__search-input {
+    position: relative;
     min-width: 418px;
     height: 50px;
     border-radius: 6px 0 0 6px;
     color: $dark-800;
     border: none;
     padding: 15px 51px;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    transition: 0.5s;
+
     &:focus {
       outline: solid 4px rgba(255, 255, 255, 0.5);
     }
+  }
+
+  // не получается найти каритнку, почему ее не показывает?
+  &__search-input::after {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/vector.svg);
+    @extend %bg-img;
+    width: 20px;
+    height: 20px;
+    top: 16px;
+    left: 13px;
   }
 
   &__user-nav {
@@ -178,7 +181,6 @@
     width: 50px;
     height: 50px;
     background-size: auto;
-
   }
 
   &__user-link--user::before {
