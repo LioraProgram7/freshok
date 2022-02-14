@@ -75,14 +75,24 @@
 
 .slick-prev {
   left: 0;
-  padding-left: 60px;
+  margin-left: 60px;
 }
 
 .slick-next {
   right: 0;
-  padding-right: 60px;
+  margin-right: 60px;
 }
 
 .slick-disabled svg path {
   fill: #C1C1C1;
 }
+
+.slick-disabled:hover svg path {
+  fill: #C1C1C1;
+}
+
+.slick-disabled:hover svg rect {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+

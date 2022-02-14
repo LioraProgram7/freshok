@@ -2,43 +2,6 @@
   padding-top: 74px;
   text-align: center;
 
-  &__list {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 51px;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 27px;
-  }
-
-  &__button {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    @extend %opensans-700;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: $dark-500;
-    border-bottom: 3px solid transparent;
-    transition: all 0.5s;
-    cursor: pointer;
-    border-bottom: transparent;
-
-    &:hover {
-      color: $green-900;
-    }
-
-    &:focus {
-      outline: 3px solid rgba(99, 166, 14, 0.2);
-      border-radius: 6px;
-    }
-
-    &:active {
-      border-bottom: 3px $green-200;
-    }
-  }
-
   &__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -54,6 +17,10 @@
   border: 1px solid rgba(17, 17, 17, 0.2);
   box-sizing: border-box;
   border-radius: 6px;
+
+  &:hover {
+    border-color: $green-900;
+  }
 
   &__img-box {
     height: 220px;
@@ -208,9 +175,10 @@
     &:active svg path {
       fill: rgba(255, 255, 255, 0.5);
     }
-
+// как сделать тень сверху на кнопке?
     &:active svg rect {
       fill: #63A60E;
+      // fill: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 }

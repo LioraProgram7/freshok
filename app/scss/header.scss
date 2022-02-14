@@ -19,7 +19,7 @@
   &__link {
     color: $white;
     position: relative;
-    transition: all 0.3s;
+    transition: 0.3s;
 
     &--address {
       padding-left: 44px;
@@ -59,7 +59,7 @@
     align-items: center;
     padding: 25px 0;
   }
-
+// без него
   &__logo {
     margin-right: -47px;
   }
@@ -77,8 +77,10 @@
     padding: 15px 38px 15px 61px;
     position: relative;
     border: none;
+    // без него
     margin-right: -42px;
-    transition: background-color 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
 
     &:hover {
       background-color: #E0EDCF;
@@ -112,10 +114,11 @@
 
   &__search {
     display: flex;
+     // без него
     margin-right: -8px;
   }
 
-  &__search-input {
+  &__search-block {
     position: relative;
     min-width: 418px;
     height: 50px;
@@ -133,8 +136,7 @@
     }
   }
 
-  // не получается найти каритнку, почему ее не показывает?
-  &__search-input::after {
+  &__search-block::after {
     content: '';
     position: absolute;
     background-image: url(../images/icons/vector.svg);
@@ -196,6 +198,7 @@
 
   &__user-link--cart::before {
     background-image: url(../images/icons/icon-cart.svg);
+     // без него
     margin-right: -23px;
   }
 

@@ -40,13 +40,14 @@
     font-size: 30px;
     max-width: 364px;
     margin-bottom: 12px;
+    letter-spacing: 0;
 
     &--shadow {
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
     }
 
     &--wight2 {
-      max-width: 210px;
+      max-width: 205px;
     }
   }
 
@@ -54,7 +55,8 @@
     color: inherit;
     border-bottom: 2px solid $dark-500;
     display: inline-block;
-    padding-bottom: 6px;
+    padding-bottom: 1px;
+    letter-spacing: 0;
 
     &--group1 {
       border-color: $white;

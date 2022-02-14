@@ -3,12 +3,14 @@
 @import 'reset';
 @import 'global';
 @import 'libs';
-@import 'index/header';
-@import 'index/footer';
+@import 'header';
+@import 'footer';
 @import 'index/slider-top';
 @import 'index/service';
-@import 'index/product';
+@import 'product';
 @import 'index/top-product';
+@import 'index/discount';
+@import 'index/partners';
 
 
 @import 'media';
