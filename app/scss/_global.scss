@@ -124,6 +124,23 @@ body {
     box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
     background-color: $white;
   }
+
+  &__mini {
+    background-color: $green-900;
+    color: $white;
+
+    &:hover {
+      background-color: #4D810C;
+    }
+
+    &:focus {
+      outline: solid 4px $green-200;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
 }
 
 .title {
@@ -131,18 +148,22 @@ body {
   font-size: 32px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 29px;
+  margin-bottom: 31px;
   text-align: center;
 }
 
 .mixer {
   display: flex;
   justify-content: center;
-  margin-bottom: 51px;
+  margin-bottom: 52px;
 
   &__item:not(:last-child) {
-    margin-right: 27px;
+    margin-right: 24px;
   }
+
+   &__item-mini:not(:last-child) {
+     margin-right: 30px;
+   }
 
   &__button {
     padding: 0;
@@ -156,6 +177,7 @@ body {
     transition: all 0.5s;
     cursor: pointer;
     border-bottom: transparent;
+    letter-spacing: 0.03em;
 
     &:hover {
       color: $green-900;
@@ -166,7 +188,7 @@ body {
       border-radius: 6px;
     }
 
-    // не пойму работает или нет. Когда елементоре смотрю нажимаю fore state - active и срабатывет, а так или не хочет или не видно из-за фокуса 
+    // не пойму работает или нет. Когда в елементоре смотрю нажимаю fore state - active и срабатывет, а так или не хочет или не видно из-за фокуса 
     &:active {
       border-bottom: 3px solid $green-200;
     }

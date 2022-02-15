@@ -1,5 +1,5 @@
 .top-product {
-  padding: 83px 0 69px;
+  padding: 83px 0 72px;
 
   &__inner {
     display: flex;
@@ -39,7 +39,7 @@
     @extend %ruda-600;
     font-size: 30px;
     max-width: 364px;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
     letter-spacing: 0;
 
     &--shadow {
@@ -55,11 +55,22 @@
     color: inherit;
     border-bottom: 2px solid $dark-500;
     display: inline-block;
-    padding-bottom: 1px;
+    padding-bottom: 5px;
     letter-spacing: 0;
+    transition: 0.5s;
+
+    &:hover {
+      color: $green-900;
+      border-color: $green-900;
+    }
 
     &--group1 {
       border-color: $white;
+
+      &:hover {
+        color: $yellow-900;
+        border-color: $yellow-900;
+      }
     }
   }
 }

@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    margin-bottom: 61px;
+    margin-bottom: 58px;
   }
 }
 
@@ -70,13 +70,17 @@
     }
   }
 
+  &__info {
+    display: none;
+  }
+
   &__span {
     max-width: 31px;
     display: inline-block;
     flex-wrap: wrap;
     position: absolute;
     left: 0;
-    margin-top: 8px;
+    margin-top: 7px;
     margin-left: 12px;
   }
 
@@ -89,7 +93,7 @@
     background-color: $green-900;
     border-radius: 6px;
     display: inline-block;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
@@ -136,8 +140,8 @@
     padding: 0 17px;
     height: 66px;
     text-align: left;
-    overflow: hidden;
-    transform: translateY(13px);
+    text-overflow: ellipsis;
+    transform: translateY(11px);
   }
 
   &__price {
@@ -175,10 +179,146 @@
     &:active svg path {
       fill: rgba(255, 255, 255, 0.5);
     }
-// как сделать тень сверху на кнопке?
+
+    // как сделать тень сверху на кнопке?
     &:active svg rect {
       fill: #63A60E;
       // fill: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+  }
+}
+
+
+.promotions {
+  background-color: #F5F5F5;
+  padding: 72px 0 83px;
+  text-align: center;
+}
+
+ .product__items-mini {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-gap: 30px;
+   margin-bottom: 61px;
+ }
+
+.product-item.product__mini {
+  height: 124px;
+  position: relative;
+  background-color: $white;
+
+  .product-item__img-box {
+    width: 130px;
+    height: 100px;
+    transform: translate(10px, -45px);
+  }
+
+  .product-item__img-link::before,
+  .product-item__img-link::after {
+    display: none;
+  }
+
+  .product-item__span {
+    margin-top: 10px;
+  }
+
+  .product-item__heart {
+    display: none;
+  }
+
+  .product-item__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-item__top {
+    z-index: 1;
+  }
+
+  .product-item__title {
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    transform: translateX(107px);
+    width: 205px;
+  }
+
+  .product-item__info {
+    display: inline-block;
+    position: absolute;
+    transform: translate(123px, -79px);
+    text-transform: uppercase;
+    @extend %opensans-600;
+    font-size: 10px;
+    line-height: 1;
+    color: $green-900;
+  }
+
+  .product-item__status-ends {
+    color: $red-900;
+  }
+
+  .product-item__status-no {
+    color: $silver-600;
+  }
+
+  .product-item__price {
+    position: absolute;
+    right: 0;
+    left: 103px;
+    transform: translateY(-80px);
+  }
+
+  .product-item__price-all {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .product-item__new-price {
+    @extend %opensans-600;
+    font-size: 20px;
+  }
+
+  .product-item__old-price {
+    font-size: 12px;
+  }
+// как рудль сделать ближе к цифре? пробывала несколько вариантов не раотает
+  .product-item__rub-new {
+    font-size: 14px;
+  }
+
+  .product-item__cart {
+    display: none;
+  }
+
+  .product-item__new-price {
+    order: -1;
+  }
+
+  .product-item__rating {
+    position: absolute;
+    right: 31px;
+    bottom: 11px;
+    @extend %opensans-700;
+    line-height: 1;
+  }
+
+  .product-item__rating-info {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/promotions/star.png');
+      width: 16px;
+      height: 16px;
+      left: 23px;
+      bottom: 0;
+      @extend %bg-img;
+    }
+  }
+
+  .btn-show__mini {
+    background-color: $green-900;
   }
 }
