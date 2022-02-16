@@ -39,8 +39,10 @@
     @extend %ruda-600;
     font-size: 30px;
     max-width: 364px;
+    height: 84px;
     margin-bottom: 7px;
     letter-spacing: 0;
+    overflow: hidden;
 
     &--shadow {
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);

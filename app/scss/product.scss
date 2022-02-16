@@ -21,6 +21,7 @@
   &:hover {
     border-color: $green-900;
   }
+  // картинки чуть больше, как сделать так чтобы ложились точно как на макете?
 
   &__img-box {
     height: 220px;
@@ -140,6 +141,8 @@
     padding: 0 17px;
     height: 66px;
     text-align: left;
+    overflow: hidden;
+    // почему не ставятся в конце троеточие?
     text-overflow: ellipsis;
     transform: translateY(11px);
   }
@@ -195,12 +198,12 @@
   text-align: center;
 }
 
- .product__items-mini {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-gap: 30px;
-   margin-bottom: 61px;
- }
+.product__items-mini {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 61px;
+}
 
 .product-item.product__mini {
   height: 124px;
@@ -282,7 +285,8 @@
   .product-item__old-price {
     font-size: 12px;
   }
-// как рудль сделать ближе к цифре? пробывала несколько вариантов не раотает
+
+  // как рубль сделать ближе к цифре? пробывала несколько вариантов не рабтает
   .product-item__rub-new {
     font-size: 14px;
   }

@@ -59,10 +59,6 @@
     align-items: center;
     padding: 25px 0;
   }
-// без него
-  &__logo {
-    margin-right: -47px;
-  }
 
   &__btn {
     min-width: 240px;
@@ -77,8 +73,8 @@
     padding: 15px 38px 15px 61px;
     position: relative;
     border: none;
-    // без него
-    margin-right: -42px;
+
+    transform: translateX(-15px);
     transition: 0.5s;
     cursor: pointer;
 
@@ -114,12 +110,25 @@
 
   &__search {
     display: flex;
-     // без него
-    margin-right: -8px;
+    transform: translateX(-25px);
   }
+
 
   &__search-block {
     position: relative;
+  }
+
+  &__search-vector {
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    padding: 8px 8px 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__search-input {
     min-width: 418px;
     height: 50px;
     border-radius: 6px 0 0 6px;
@@ -136,17 +145,6 @@
     }
   }
 
-  &__search-block::after {
-    content: '';
-    position: absolute;
-    background-image: url(../images/icons/vector.svg);
-    @extend %bg-img;
-    width: 20px;
-    height: 20px;
-    top: 16px;
-    left: 13px;
-  }
-
   &__user-nav {
     max-width: 155px;
     width: 100%;
@@ -154,56 +152,33 @@
     justify-content: space-evenly;
   }
 
+  &__user-item {
+    transform: translate(-6px, 3px);
+
+  }
+
+  &__user-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  // не получается паддингами расширить иконку
   &__user-link {
     position: relative;
-    transition: all 0.5s;
+    transition: 0.5s;
 
-    &:hover::before {
+    &:hover {
       background-color: rgb(255, 255, 255, 0.1);
       border-radius: 3px;
     }
 
-    &:focus::before {
+    &:focus {
       outline: 3px solid $green-100;
       border-radius: 3px;
     }
 
-    &:active {
-      opacity: 0.1;
-      border-radius: 3px;
+    &:active svg path {
+      fill: rgba(255, 255, 255, 0.5);
     }
-  }
-
-  &__user-link::before {
-    content: '';
-    position: absolute;
-    @extend %bg-img;
-    top: -26px;
-    right: -17px;
-    width: 50px;
-    height: 50px;
-    background-size: auto;
-  }
-
-  &__user-link--user::before {
-    background-image: url(../images/icons/icon-user.svg);
-    margin-right: 24px;
-  }
-
-  &__user-link--heart::before {
-    background-image: url(../images/icons/icon-heart.svg);
-    right: -15px;
-    margin-right: -1px;
-  }
-
-  &__user-link--cart::before {
-    background-image: url(../images/icons/icon-cart.svg);
-     // без него
-    margin-right: -23px;
-  }
-
-  &__user-item {
-    position: relative;
   }
 
   &__user-num {
@@ -212,17 +187,12 @@
     height: 18px;
     border-radius: 50%;
     background-color: $white;
-    top: -22px;
-    right: 13px;
     @extend %opensans-600;
     font-size: 10px;
     color: $red-900;
     text-align: center;
     line-height: 18px;
-
-    &--two {
-      right: -10px;
-    }
+    transform: translate(-38px, -7px);
   }
 }
 

@@ -35,6 +35,7 @@
     border: none;
     padding: 12px;
     line-height: 1;
+
     &:focus {
       outline: 4px solid #E0EDCF;
     }
@@ -51,9 +52,10 @@
     cursor: pointer;
   }
 
-// исправить при фокусе линии
+  // не получается исправить при фокусе линию которая вылазит, минусовый марджин не сработал на нее
   &__list {
     column-count: 3;
+    // margin-top: -10px;
   }
 
   &__link {
@@ -96,7 +98,7 @@
       outline: 3px solid #E0EDCF;
       border-radius: 3px;
     }
-    
+
     &:active svg path {
       fill: $green-200;
     }
