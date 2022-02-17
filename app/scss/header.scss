@@ -165,6 +165,10 @@
   &__user-link {
     position: relative;
     transition: 0.5s;
+    // ЦВЕТ НЕ МЕНЯЕТ!
+    svg path {
+      fill: $white;
+    }
 
     &:hover {
       background-color: rgb(255, 255, 255, 0.1);

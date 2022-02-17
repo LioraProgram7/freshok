@@ -119,6 +119,10 @@
     position: absolute;
     right: 9px;
     top: 15px;
+  // ЦВЕТ НЕ МЕНЯЕТ!
+    svg path {
+      fill:#C1C1C1;
+    }
 
     &:hover svg path {
       fill: #FFB800;
