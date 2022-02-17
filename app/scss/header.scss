@@ -19,7 +19,7 @@
   &__link {
     color: $white;
     position: relative;
-    transition: 0.3s;
+    transition: color 0.7s;
 
     &--address {
       padding-left: 44px;
@@ -74,7 +74,7 @@
     position: relative;
     border: none;
 
-    transform: translateX(-15px);
+    transform: translateX(-9px);
     transition: 0.5s;
     cursor: pointer;
 
@@ -82,6 +82,9 @@
       background-color: #E0EDCF;
       border-radius: 6px 6px 0px 0px;
     }
+      &:focus {
+        outline: 3px solid #E0EDCF;
+      }
   }
 
   &__btn::before,
@@ -110,7 +113,7 @@
 
   &__search {
     display: flex;
-    transform: translateX(-25px);
+    transform: translateX(-14px);
   }
 
 
@@ -126,6 +129,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    &:focus {
+      outline: 3px solid $white;
+      border-radius: 3px;
+    }
   }
 
   &__search-input {
@@ -146,27 +154,33 @@
   }
 
   &__user-nav {
-    max-width: 155px;
+    max-width: 17px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
   }
 
   &__user-item {
-    transform: translate(-6px, 3px);
-
+    display: flex;
   }
 
   &__user-item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 10px;
   }
 
-  // не получается паддингами расширить иконку
   &__user-link {
     position: relative;
     transition: 0.5s;
-    // ЦВЕТ НЕ МЕНЯЕТ!
-    svg path {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+
+    svg {
+      transform: translateY(9px);
+    }
+
+    svg use {
       fill: $white;
     }
 
@@ -180,7 +194,7 @@
       border-radius: 3px;
     }
 
-    &:active svg path {
+    &:active svg use {
       fill: rgba(255, 255, 255, 0.5);
     }
   }
@@ -196,7 +210,11 @@
     color: $red-900;
     text-align: center;
     line-height: 18px;
-    transform: translate(-38px, -7px);
+    transform: translate(-13px, 3px);
+
+    &--two {
+      transform: translate(4px, 3px);
+    }
   }
 }
 
@@ -209,9 +227,9 @@
   &__item:not(:last-child) {
     padding-right: 24px;
   }
-
+// почему не работает color 0.6s;
   &__link {
     color: $white;
-    transition: all 0.3s;
+    transition: color 0.6s;
   }
 }

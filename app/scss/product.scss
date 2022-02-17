@@ -6,12 +6,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 29px;
   }
 }
 
 .product-item {
-  max-width: 300px;
+  max-width: 302px;
   width: 100%;
   height: 409px;
   border: 1px solid rgba(17, 17, 17, 0.2);
@@ -21,12 +25,11 @@
   &:hover {
     border-color: $green-900;
   }
-  // картинки чуть больше, как сделать так чтобы ложились точно как на макете?
 
   &__img-box {
-    height: 220px;
+    height: 215px;
     position: relative;
-    overflow: hidden;
+    margin-bottom: 5px;
     transition: all 0.5s;
   }
 
@@ -71,6 +74,10 @@
     }
   }
 
+  &__images {
+    object-fit: contain;
+  }
+
   &__info {
     display: none;
   }
@@ -82,7 +89,7 @@
     position: absolute;
     left: 0;
     margin-top: 7px;
-    margin-left: 12px;
+    margin-left: 10px;
   }
 
   &__badge {
@@ -109,22 +116,23 @@
 
   &__top {
     position: relative;
-    height: 56px;
+    height: 57px;
   }
 
   &__heart {
     @extend %none-btn;
-    padding: 1px 1px;
     cursor: pointer;
     position: absolute;
-    right: 9px;
-    top: 15px;
-  // ЦВЕТ НЕ МЕНЯЕТ!
-    svg path {
-      fill:#C1C1C1;
+    width: 44px;
+    height: 44px;
+    right: 4px;
+    top: 9px;
+
+    svg use {
+      fill: #C1C1C1;
     }
 
-    &:hover svg path {
+    &:hover svg use {
       fill: #FFB800;
     }
 
@@ -143,30 +151,34 @@
     line-height: 1.4;
     font-size: 14px;
     padding: 0 17px;
-    height: 66px;
+    height: 60px;
+    margin-bottom: 9px;
     text-align: left;
     overflow: hidden;
-    // почему не ставятся в конце троеточие?
     text-overflow: ellipsis;
-    transform: translateY(11px);
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 3;
+    transform: translateY(12px);
   }
 
   &__price {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 16px 17px 18px 20px;
+    padding: 11px 18px 11px 19px;
     line-height: 1;
     color: $dark-500;
   }
 
   &__new-price {
-    padding-right: 6px;
+    padding-right: 18px;
   }
 
   &__old-price {
     text-decoration: line-through;
     color: $silver-600;
+    transform: translate(-4px, -2px);
   }
 
   &__cart {
@@ -174,8 +186,14 @@
     cursor: pointer;
     width: 32px;
     height: 32px;
+    // сама корзинка жирная, не такая как в макете
+    stroke: $white;
 
-    &:hover svg rect {
+    svg use {
+      fill: #63A60E;
+    }
+
+    &:hover svg use {
       fill: #4D800C;
     }
 
@@ -183,11 +201,11 @@
       outline: solid 4px $green-200;
     }
 
-    &:active svg path {
-      fill: rgba(255, 255, 255, 0.5);
+    &:active {
+      stroke: rgba(255, 255, 255, 0.5);
     }
 
-    // как сделать тень сверху на кнопке?
+     // тень сделать
     &:active svg rect {
       fill: #63A60E;
       // fill: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -202,14 +220,14 @@
   text-align: center;
 }
 
-.product__items-mini {
+.promotions__items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   margin-bottom: 61px;
 }
 
-.product-item.product__mini {
+.product-item.product-item--mini {
   height: 124px;
   position: relative;
   background-color: $white;
@@ -219,11 +237,11 @@
     height: 100px;
     transform: translate(10px, -45px);
   }
-
-  .product-item__img-link::before,
-  .product-item__img-link::after {
-    display: none;
-  }
+//убрать ссылку
+    .product-item__img-link::before,
+    .product-item__img-link::after {
+      display: none;
+    }
 
   .product-item__span {
     margin-top: 10px;
@@ -253,7 +271,7 @@
   .product-item__info {
     display: inline-block;
     position: absolute;
-    transform: translate(123px, -79px);
+    transform: translate(121px, -86px);
     text-transform: uppercase;
     @extend %opensans-600;
     font-size: 10px;
@@ -278,7 +296,7 @@
 
   .product-item__price-all {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
   }
 
   .product-item__new-price {
@@ -290,7 +308,6 @@
     font-size: 12px;
   }
 
-  // как рубль сделать ближе к цифре? пробывала несколько вариантов не рабтает
   .product-item__rub-new {
     font-size: 14px;
   }

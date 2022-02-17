@@ -16,7 +16,7 @@
     text-transform: uppercase;
     border-bottom: 2px solid $green-900;
     margin-bottom: 31px;
-    margin-right: 8px;
+    margin-right: 10px;
     padding-bottom: 2px;
 
     &:hover {
@@ -39,17 +39,20 @@
     justify-content: space-between;
   }
 
-  // не понятно почему не скругляются верхние углы
   &__item {
     max-width: 410px;
     width: 100%;
-    border-radius: 6px;
-    // outline не срабатывает
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
-  }
-
-  &news__inner {
     position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    &:focus {
+      box-shadow: 3px rgba(99, 166, 14, 0.5);
+
+      border-radius: 6px;
+    }
   }
 
   &__date {
@@ -57,10 +60,11 @@
     width: 65px;
     height: 76px;
     padding: 14px 2px 10px;
+    top: 0;
+    left: 21px;
     background-color: $white;
     border-radius: 0px 0px 4px 4px;
     z-index: 5;
-    transform: translate(19px, -239px);
     color: #121212;
     text-align: center;
   }
@@ -80,14 +84,16 @@
     text-transform: uppercase;
   }
 
-  &__text {
+  &__subtitle-text {
+    display: block;
     @extend %opensans-600;
     font-size: 16px;
     line-height: 1.5;
     color: $dark-900;
     letter-spacing: 0;
-    padding: 20px 18px 18px;
+    padding: 19px 17px 18px;
     text-overflow: ellipsis;
+    transition: color 0.5s;
 
     &:hover {
       color: $green-900;

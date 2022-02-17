@@ -6,10 +6,12 @@
     justify-content: space-around;
     align-items: center;
     margin: 0 -13px;
-  }
-
-  &__item {
-    cursor: pointer;
+// не становятся так по макету
+     // max-width: 1180px;
+      // width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
   }
 
   &__img {

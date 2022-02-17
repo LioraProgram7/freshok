@@ -26,6 +26,9 @@
     &--group2 {
       margin-right: 29px;
     }
+    // &:not(:last-child){
+    //   margin-right: 30px;
+    // }
   }
 
   &__subtitle {
@@ -40,7 +43,7 @@
     font-size: 30px;
     max-width: 364px;
     height: 84px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     letter-spacing: 0;
     overflow: hidden;
 
@@ -57,13 +60,17 @@
     color: inherit;
     border-bottom: 2px solid $dark-500;
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     letter-spacing: 0;
-    transition: 0.5s;
+    transition: color 0.5s, border-color 0.5s;
 
     &:hover {
       color: $green-900;
       border-color: $green-900;
+    }
+    &:focus {
+      outline: 3px solid#EFF6E7;
+      border-radius: 6px;
     }
 
     &--group1 {
