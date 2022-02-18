@@ -156,9 +156,9 @@
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
-     display: -webkit-box;
-     -webkit-box-orient: vertical;
-     -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
     transform: translateY(12px);
   }
 
@@ -205,43 +205,35 @@
       stroke: rgba(255, 255, 255, 0.5);
     }
 
-     // тень сделать
+    // тень не получилось сделать, помоги пожалуйста
     &:active svg rect {
       fill: #63A60E;
-      // fill: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      outline: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 }
 
-
-.promotions {
-  background-color: #F5F5F5;
-  padding: 72px 0 83px;
-  text-align: center;
-}
-
-.promotions__items {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-  margin-bottom: 61px;
-}
-
+// код блока promotions
 .product-item.product-item--mini {
   height: 124px;
   position: relative;
   background-color: $white;
 
-  .product-item__img-box {
-    width: 130px;
-    height: 100px;
-    transform: translate(10px, -45px);
+  .product-item__top {
+    height: 0;
   }
-//убрать ссылку
-    .product-item__img-link::before,
-    .product-item__img-link::after {
-      display: none;
-    }
+
+  .product-item__img-box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+
+  .product-item__images {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+  }
 
   .product-item__span {
     margin-top: 10px;
@@ -249,11 +241,6 @@
 
   .product-item__heart {
     display: none;
-  }
-
-  .product-item__wrapper {
-    display: flex;
-    flex-direction: column;
   }
 
   .product-item__top {
@@ -268,10 +255,9 @@
     width: 205px;
   }
 
-  .product-item__info {
-    display: inline-block;
+  .product-item__status {
     position: absolute;
-    transform: translate(121px, -86px);
+    transform: translate(-16px, -27px);
     text-transform: uppercase;
     @extend %opensans-600;
     font-size: 10px;
@@ -291,7 +277,7 @@
     position: absolute;
     right: 0;
     left: 103px;
-    transform: translateY(-80px);
+    transform: translateY(-42px);
   }
 
   .product-item__price-all {
@@ -321,15 +307,11 @@
   }
 
   .product-item__rating {
-    position: absolute;
-    right: 31px;
+    position: relative;
+    left: 106px;
     bottom: 11px;
     @extend %opensans-700;
     line-height: 1;
-  }
-
-  .product-item__rating-info {
-    position: relative;
 
     &::before {
       content: '';

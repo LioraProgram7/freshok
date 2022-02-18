@@ -26,9 +26,6 @@
     &--group2 {
       margin-right: 29px;
     }
-    // &:not(:last-child){
-    //   margin-right: 30px;
-    // }
   }
 
   &__subtitle {
@@ -68,6 +65,7 @@
       color: $green-900;
       border-color: $green-900;
     }
+
     &:focus {
       outline: 3px solid#EFF6E7;
       border-radius: 6px;

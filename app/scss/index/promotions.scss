@@ -1,0 +1,14 @@
+.promotions {
+  background-color: #F5F5F5;
+  padding: 72px 0 83px;
+  text-align: center;
+}
+
+.promotions__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 61px;
+}
+
+// остальной код в файле product
