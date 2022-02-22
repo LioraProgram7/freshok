@@ -56,3 +56,40 @@
     width: 100%;
   }
 }
+
+@media (max-width: $lg) {
+  .service {
+    &__inner {
+      justify-content: space-between;
+    }
+
+    &__item {
+      margin-right: 0;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .service {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 31px;
+    }
+
+    &__item--24-hours {
+      margin-right: 50px;
+    }
+
+    &__text {
+      max-width: none;
+    }
+  }
+}
