@@ -1,6 +1,6 @@
 .slider-top {
   letter-spacing: 0;
-  height: 600px;
+  max-height: 600px;
 
 
   &__item {
@@ -12,6 +12,7 @@
     padding: 24px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
@@ -56,7 +57,7 @@ svg rect {
   width: 60px;
   height: 60px;
   transform: translateY(-50%);
-  
+
   z-index: 5;
 
   &:hover svg path {
@@ -81,6 +82,10 @@ svg rect {
   }
 }
 
+.slick-dots {
+  display: none;
+}
+
 .slick-prev {
   left: 0;
   margin-left: 60px;
@@ -101,4 +106,85 @@ svg rect {
 
 .slick-disabled:hover svg rect {
   fill: rgba(255, 255, 255);
+}
+
+
+@media (max-width: $xl) {
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-130px);
+
+    li {
+      list-style: none;
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background-color: $white;
+      border: 1px solid #C1C1C1;
+      border-radius: 50%;
+      padding: 0;
+      border: none;
+    }
+
+    .slick-active button {
+      background-color: $green-900;
+      border-color: $green-900;
+    }
+  }
+
+  .slick-prev svg,
+  .slick-next svg {
+    display: none;
+  }
+
+  .slider-top {
+    &__item {
+      padding: 142px 0;
+    }
+
+    .container {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .slider-top {
+    &__item {
+      padding: 80px 0;
+    }
+
+    &__content {
+      padding: 15px;
+    }
+
+    &__title {
+      max-width: 540px;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      margin-bottom: 24px;
+    }
+  }
+
+  .btn-green {
+    max-width: 152px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .slick-dots {
+    transform: translateY(-60px);
+  }
 }

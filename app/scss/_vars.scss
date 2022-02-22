@@ -11,6 +11,12 @@ $silver-600: #C1C1C1;
 $silver-100: #F6F6F6;
 $white: #FFFFFF;
 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1290px;
+
 %opensans-300 {
   font-family: 'OpenSans-Light', sans-serif;
   font-weight: 300;
@@ -72,3 +78,4 @@ $white: #FFFFFF;
   background-size: cover;
   background-position: center;
 }
+
