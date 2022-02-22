@@ -1,10 +1,11 @@
 .slider-top {
   letter-spacing: 0;
+  height: 600px;
+
 
   &__item {
     padding: 142px;
     @extend %bg-img;
-    height: 600px;
   }
 
   &__content {
@@ -39,6 +40,11 @@
   }
 }
 
+svg path,
+svg rect {
+  transition: fill 0.5s;
+}
+
 .slick-prev,
 .slick-next {
   border: none;
@@ -50,7 +56,7 @@
   width: 60px;
   height: 60px;
   transform: translateY(-50%);
-  transition: color 0.5s;
+  
   z-index: 5;
 
   &:hover svg path {

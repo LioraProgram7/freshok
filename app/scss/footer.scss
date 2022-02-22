@@ -9,7 +9,7 @@
   justify-content: space-between;
 
   &__logo {
-    margin-top: 30px;
+    margin-top: 33px;
     display: inline-block;
   }
 
@@ -57,39 +57,31 @@
 
   &__list {
     column-count: 3;
-    max-width: 462px;
+    max-width: 600px;
     width: 100%;
-    margin-right: 55px;
     margin-top: -3px;
+    transform: translateX(66px);
   }
 
   &__list-item {
     padding-top: 3px;
-  }
-
-  &__list-item--2 {
-    transform: translateX(45px);
-  }
-
-  &__list-item--3 {
-    transform: translateX(91px);
+    margin-bottom: 16px;
   }
 
   &__link {
     color: $white;
-    margin-bottom: 16px;
-    display: block;
     transition: 0.3s;
   }
 
   &__contact {
+    max-width: 215px;
+    width: 100%;
     transform: translateX(-2px);
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    margin-left: -48px;
     font-style: normal;
   }
 
@@ -105,7 +97,11 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-left: -49px;
+    flex-wrap: wrap;
+  }
+
+  &__social-list:not(:last-child) {
+    margin-right: 10px;
   }
 
   &__social-link {

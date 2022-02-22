@@ -24,6 +24,14 @@ body {
   padding: 0 15px;
 }
 
+.indent {
+  padding: 72px 0;
+}
+
+.indent-bottom {
+  padding-bottom: 72px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -39,6 +47,7 @@ body {
 
 .logo {
   transition: 0.3s;
+  object-fit: contain;
 
   &:hover {
     transform: scale(1.03);
@@ -78,10 +87,9 @@ body {
 
 .btn-black {
   min-width: 158px;
-  height: 50px;
   background-color: $dark-800;
   border-radius: 0 6px 6px 0;
-  padding: 15px 52px;
+  padding: 15px;
   @extend %opensans-600;
   color: $white;
   cursor: pointer;
@@ -103,6 +111,7 @@ body {
 }
 
 .btn-show {
+  display: inline-block;
   font-size: 18px;
   line-height: 1.3;
   color: $green-900;
@@ -111,6 +120,7 @@ body {
   border: 1px solid #63A60E;
   box-sizing: border-box;
   border-radius: 6px;
+  transition: background-color 0.5s, box-shadow 0.5s;
 
   &:hover {
     background-color: $green-100;
@@ -128,6 +138,8 @@ body {
   &__mini {
     background-color: $green-900;
     color: $white;
+    transition: background-color 0.5s,
+    box-shadow 0.5s;
 
     &:hover {
       background-color: #4D810C;
@@ -148,14 +160,15 @@ body {
   font-size: 32px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 31px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
 .mixer {
   display: flex;
   justify-content: center;
-  margin-bottom: 52px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
 
   &__item:not(:last-child) {
     margin-right: 24px;
@@ -187,16 +200,18 @@ body {
       outline: 3px solid rgba(99, 166, 14, 0.2);
       border-radius: 6px;
     }
+  }
 
-    // не пойму работает или нет. Когда в елементоре смотрю нажимаю fore state - active и срабатывет, а так или не хочет или не видно из-за фокуса 
-    &:active {
-      border-bottom: 3px solid $green-200;
-    }
+  .mixitup-control-active {
+    border-bottom: 3px solid $green-200;
   }
 }
 
 // стайлгайд header__top / footer
 .link-white {
+  color: $white;
+  transition: opacity 0.6s;
+
   &:hover {
     opacity: 0.7;
   }

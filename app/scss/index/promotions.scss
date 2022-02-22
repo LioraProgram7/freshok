@@ -1,14 +1,19 @@
 .promotions {
   background-color: #F5F5F5;
-  padding: 72px 0 83px;
   text-align: center;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    margin-bottom: 46px;
+  }
+
+  &__items {
+    margin-bottom: 48px;
+  }
 }
 
-.promotions__items {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-  margin-bottom: 61px;
-}
+//код карточки товара в файле product-item--mini
 
-// остальной код в файле product

@@ -1,5 +1,5 @@
 .top-product {
-  padding: 83px 0 72px;
+  // padding-bottom: 72px;
 
   &__inner {
     display: flex;
@@ -16,16 +16,18 @@
     color: $dark-500;
     text-transform: uppercase;
 
-    &--group1 {
-      max-width: 630px;
-      margin-right: 31px;
-      color: $white;
-      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    &:not(:last-child) {
+      margin-right: 30px;
     }
+  }
 
-    &--group2 {
-      margin-right: 29px;
-    }
+  &__item--width {
+    max-width: 630px;
+  }
+
+  &__item--white {
+    color: $white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
   }
 
   &__subtitle {
@@ -38,19 +40,10 @@
   &__title {
     @extend %ruda-600;
     font-size: 30px;
-    max-width: 364px;
     height: 84px;
     margin-bottom: 10px;
     letter-spacing: 0;
     overflow: hidden;
-
-    &--shadow {
-      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    &--wight2 {
-      max-width: 205px;
-    }
   }
 
   &__link {
@@ -67,17 +60,23 @@
     }
 
     &:focus {
-      outline: 3px solid#EFF6E7;
+      outline: 4px solid rgba(99, 166, 14, 0.5);
       border-radius: 6px;
     }
+  }
+}
 
-    &--group1 {
-      border-color: $white;
+.top-product__item--width {
+  .top-product__title {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  }
 
-      &:hover {
-        color: $yellow-900;
-        border-color: $yellow-900;
-      }
+  .top-product__link {
+    border-color: $white;
+
+    &:hover {
+      color: $yellow-900;
+      border-color: $yellow-900;
     }
   }
 }
