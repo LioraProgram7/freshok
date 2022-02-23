@@ -230,6 +230,17 @@ body {
   }
 }
 
+@media (max-width: $xl) {
+  .indent {
+    padding: 55px 0;
+  }
+
+  .indent-bottom {
+    padding-bottom: 55px;
+  }
+}
+
+
 @media (max-width: $sm) {
   .title {
     font-size: 24px;
@@ -252,4 +263,7 @@ body {
     padding: 48px 0;
   }
 
+  .indent-bottom {
+    padding-bottom: 47px;
+  }
 }
