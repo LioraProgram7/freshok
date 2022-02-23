@@ -23,3 +23,21 @@
     }
   }
 }
+// попытка центрировать картинки
+// .slick-slider .slick-list {
+//   display: flex;
+//   align-items: center;
+// }
+
+
+@media (max-width: $xl) {
+  .partners {
+    padding: 55px 72px;
+  }
+}
+
+@media (max-width: $md) {
+  .partners {
+    padding: 48px 72px;
+  }
+}
