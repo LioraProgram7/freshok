@@ -13,6 +13,7 @@
     @extend %opensans-700;
     color: $dark-500;
     text-transform: uppercase;
+    border-radius: 6px;
 
     &:not(:last-child) {
       margin-right: 30px;
