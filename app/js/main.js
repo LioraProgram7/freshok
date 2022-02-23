@@ -8,15 +8,49 @@ $(function () {
     infinite: false,
     dots: true
 
-
-
-
     // autoplay: true,
     // autoplaySpead: 2000,
 
   });
 
+  $('.partners__list').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    arrows: false,
+    responsive: [{
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 5,
+            // slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 992,
+            settings: {
+              slidesToShow: 4,
+              // slidesToScroll: 2,
+            }
+        },
+        {
+           breakpoint: 768,
+             settings: {
+               slidesToShow: 3,
+               // slidesToScroll: 2,
+             }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            // slidesToScroll: 2,
+          }
+        }
+      ]
 
+  });
+
+  
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
   var containerEl2 = document.querySelector('[data-ref="container-2"]');
 

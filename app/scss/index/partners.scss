@@ -1,8 +1,12 @@
 .partners {
   padding: 72px;
-
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+// добавила слайдер, но именно по макету выровнять не получается
   &__list {
-    max-width: 1180px;
+    max-width: 1000px;
     width: 100%;
     display: flex;
     justify-content: space-between;
