@@ -123,7 +123,8 @@
       outline: 3px solid #E0EDCF;
       border-radius: 3px;
     }
-// не понимаю почему перестал работать
+
+    // не понимаю почему перестал работать
     &:active svg use {
       fill: rgba(255, 184, 0, 0.5);
     }
@@ -169,6 +170,7 @@
     cursor: pointer;
     width: 32px;
     height: 32px;
+    border-radius: 3px;
     background-color: $green-900;
     transition: background-color 0.5s;
 
@@ -195,3 +197,54 @@
   }
 }
 
+
+
+@media (max-width: $xl) {
+  .product__items {
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width: $lg) {
+  .product__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-item {
+    &__top {
+      height: 56px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .product__items {
+    grid-gap: 10px;
+  }
+
+  .product-item {
+    height: 344px;
+
+    &__img-box,
+    &__link,
+    &__images {
+      height: 120px;
+    }
+
+    &__title {
+      padding: 0 12px;
+    }
+
+    &__price {
+      padding: 49px 9px 11px 9px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .product__items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 24px;
+  }
+}

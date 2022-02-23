@@ -13,4 +13,13 @@
   }
 }
 
+
+@media (max-width: $sm) {
+  .product {
+    &__title {
+      margin-bottom: 9px;
+    }
+  }
+}
+
 // код карточки товара в product-item 
