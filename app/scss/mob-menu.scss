@@ -1,0 +1,181 @@
+.mob-menu {
+  display: none;
+}
+// В макете буквы выглядят меньше, но те же параметры задаю и они получаються больше. Это что-то я не понимаю или это ошибка макета?
+@media (max-width: $lg) {
+  .mob-menu {
+    display: flex;
+    flex-direction: column;
+    width: 273px;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: $white;
+    position: fixed;
+    z-index: 999;
+  // не могу найти причину почему не выезжает меню
+      .active {
+        left: 0;
+      }
+
+    &__profile {
+      display: flex;
+      background-color: #63A60E;
+      align-items: center;
+    }
+
+    &__login {
+      font-size: 18px;
+      line-height: 1.0;
+      color: $white;
+    }
+
+    &__login--slash {
+      position: relative;
+      padding-right: 20px;
+      margin-right: 15px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 18px;
+        background-color: $white;
+        left: 59px;
+        top: 0;
+      }
+    }
+
+    .header-bottom__btn {
+      display: inherit;
+      color: $dark-800;
+      font-size: 18px;
+      padding: 9px 15px 9px 50px;
+      height: 42px;
+
+      &::before {
+        background-image: url('../images/icons/nav_icon-black.svg');
+        top: 13px;
+        left: 11px;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      padding: 23px 15px 14px;
+      border-top: 1px solid rgba(193, 193, 193, 0.3);
+    }
+
+    &__info {
+      font-size: 18px;
+      line-height: 1.0;
+      color: $dark-800;
+      position: relative;
+      padding-left: 33px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        left: 0;
+        top: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &--tell {
+        margin-bottom: 21px;
+      }
+
+      &--tell::after {
+        background-image: url('../images/icons/icon-tel-black.svg');
+        height: 23px;
+      }
+
+      &--address::after {
+        background-image: url('../images/icons/group.svg');
+        height: 32px;
+      }
+    }
+
+    &__social {
+      display: flex;
+      padding: 0 13px 13px;
+      border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    }
+
+    &__social-list:not(:last-child) {
+      margin-right: 7px;
+    }
+
+    &__social-link {
+      transition: 0.5s;
+      width: 32px;
+      height: 32px;
+
+      svg use {
+        fill: $dark-800;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: 3px solid #E0EDCF;
+        border-radius: 3px;
+      }
+
+      &:active svg use {
+        fill: $green-900;
+      }
+    }
+
+    &__list {
+      padding: 24px 15px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &__link {
+      font-size: 18px;
+      line-height: 1.2;
+      text-transform: capitalize;
+      color: #31352B;
+    }
+
+    .header-bottom__user-link {
+      width: 30px;
+      height: 43px;
+      margin: 0 10px;
+
+      svg {
+        width: 25px;
+        height: 28px;
+      }
+
+      use {
+        width: 25px;
+        height: 28px;
+      }
+
+      &::focus {
+        outline: none;
+      }
+    }
+  }
+
+
+  .logo-green {
+    display: inline-block;
+    margin: 21px 13px;
+  }
+}

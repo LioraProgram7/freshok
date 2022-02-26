@@ -159,6 +159,8 @@ svg rect {
 
 @media (max-width: $md) {
   .slider-top {
+    max-height: 385px;
+
     &__item {
       padding: 80px 0;
     }
@@ -176,15 +178,35 @@ svg rect {
     &__text {
       margin-bottom: 24px;
     }
-  }
 
-  .btn-green {
-    max-width: 152px;
-    height: 42px;
-    font-size: 14px;
+    &__btn {
+      max-width: 152px;
+      height: 42px;
+      font-size: 14px;
+    }
   }
 
   .slick-dots {
     transform: translateY(-60px);
   }
+}
+
+@media (max-width: $sm) {
+  .slider-top {
+    max-height: 317px;
+
+    &__title {
+      max-width: 300px;
+      font-size: 20px;
+    }
+
+    &__item {
+      padding: 60px 0 50px;
+    }
+  }
+
+  .slick-dots {
+    transform: translateY(-36px);
+  }
+
 }
