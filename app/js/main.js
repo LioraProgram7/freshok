@@ -1,15 +1,14 @@
 $(function () {
-//  для бургера 
-    $('.menu__btn, .menu a').on('click', function () {
-      $('.menu__btn, .mob-menu').toggleClass('active');
-    });
+  //  для бургера 
+  $('.menu__btn, .menu a').on('click', function () {
+    $('.menu__btn, .mob-menu').toggleClass('active');
+  });
 
-// для поиска
-    //  $('.header-bottom__user-item--search').on('click', function () {
-    //    $('.header-bottom__user-item--search, .header-bottom__search').toggleClass('active');
-    //  });
+  // для поиска
+   $('.header-bottom__user-item--search').on('click', function () {
+     $('.header-bottom__user-item--search, .header-bottom__search').toggleClass('active');
+   });
 
-    
 
 
   $('.slider-top__inner').slick({
@@ -17,10 +16,18 @@ $(function () {
 
     nextArrow: '<button type="button" class="slick-next"><svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width = "60" height = "60" rx = "6" fill = "white" fill - opacity = "0.8"/><path d = "M38.9641 28.9851L22.9508 14.3921C22.4254 13.8693 21.5731 13.8693 21.0477 14.3921C20.5222 14.9149 20.5222 15.7631 21.0477 16.2859L36.0954 30L21.049 43.7141C20.5235 44.2369 20.5235 45.0852 21.049 45.6079C21.5745 46.1307 22.4267 46.1307 22.9521 45.6079L38.9654 31.0149C39.2455 30.7362 39.3656 30.3668 39.3469 30.0014C39.3643 29.6346 39.2443 29.2652 38.9641 28.9851Z" fill = "#505050"/></svg></button>',
 
-    infinite: false,
-    dots: true
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        infinite: false,
+        dots: true,
+        prevArrow: false,
+        nextArrow: false
+      }
+    }, ]
 
   });
+  
 
   $('.partners__list').slick({
     infinite: true,

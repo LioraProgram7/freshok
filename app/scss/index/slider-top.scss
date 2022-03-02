@@ -82,10 +82,6 @@ svg rect {
   }
 }
 
-.slick-dots {
-  display: none;
-}
-
 .slick-prev {
   left: 0;
   margin-left: 60px;
@@ -139,11 +135,6 @@ svg rect {
       background-color: $green-900;
       border-color: $green-900;
     }
-  }
-
-  .slick-prev svg,
-  .slick-next svg {
-    display: none;
   }
 
   .slider-top {

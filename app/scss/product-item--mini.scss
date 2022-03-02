@@ -71,7 +71,7 @@
     position: absolute;
     right: 0;
     left: 103px;
-    transform: translateY(-42px);
+    bottom: 0;
   }
 
   .product-item__price-all {
@@ -158,7 +158,11 @@
 @media (max-width: $md) {
   .product-item.product-item--mini {
     .product-item__price {
-      transform: translate(12px, -42px);
+      left: 114px;
+    }
+    .product-item__images {
+      top: 0;
     }
   }
 }
+

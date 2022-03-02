@@ -1,20 +1,20 @@
 .mob-menu {
   display: none;
 }
-// В макете буквы выглядят меньше, но те же параметры задаю и они получаються больше. Это что-то я не понимаю или это ошибка макета?
+
 @media (max-width: $lg) {
   .mob-menu {
     display: flex;
     flex-direction: column;
-    width: 273px;
+    width: 300px;
     height: 100%;
     top: 0;
     left: -100%;
     background-color: $white;
     position: fixed;
-    z-index: 999;
-  // не могу найти причину почему не выезжает меню
-      .active {
+    z-index: 2;
+
+      &.active {
         left: 0;
       }
 
@@ -115,7 +115,7 @@
     }
 
     &__social-link {
-      transition: 0.5s;
+      transition: opacity 0.5s;
       width: 32px;
       height: 32px;
 

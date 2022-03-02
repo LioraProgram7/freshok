@@ -131,20 +131,5 @@
     &__item {
       max-width: 400px;
     }
-
-    &--group2 {
-      margin-right: 0px;
-    }
-  }
-}
-
-@media (max-width: $sm) {
-  .top-product {
-    &__item {
-      max-width: 345px;
-       &:not(:first-child) {
-         margin-right: 0px;
-       }
-    }
   }
 }

@@ -3,7 +3,8 @@
 @import 'reset';
 @import 'global';
 @import 'libs';
-@import 'header';
+@import 'header/header-top';
+@import 'header/header-bottom';
 @import 'mob-menu';
 @import 'footer';
 @import 'index/slider-top';
@@ -17,4 +18,3 @@
 @import 'index/news';
 
 
-@import 'media';

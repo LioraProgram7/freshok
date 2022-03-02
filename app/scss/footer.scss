@@ -160,13 +160,13 @@
   .footer-top {
     flex-direction: column;
     justify-content: center;
-    padding: 24px 0;
+    padding: 19px 0 24px;
 
 
     &__contact {
       order: -3;
       max-width: none;
-      padding-bottom: 24px;
+      padding-bottom: 21px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1)
     }
 
@@ -175,7 +175,7 @@
       order: -2;
       margin: 0 auto;
       transform: none;
-      padding: 24px 0;
+      padding: 21px 0 6px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       column-count: 4;
     }

@@ -130,7 +130,7 @@
       border-radius: 3px;
     }
 
-    // не понимаю почему перестал работать
+    // не понимаю почему перестал работать, при нажатии вообще пропадает. Изначально все работало нормально
     &:active svg use {
       fill: rgba(255, 184, 0, 0.5);
     }
@@ -258,5 +258,16 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
     margin-bottom: 24px;
+  }
+
+  .product-item {
+    &__heart {
+      width: 35px;
+      height: 35px;
+    }
+
+    &__price {
+      padding: 9px 12px 15px 10px;
+    }
   }
 }

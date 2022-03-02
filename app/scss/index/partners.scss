@@ -1,17 +1,18 @@
 .partners {
-  padding: 72px;
+  padding: 70px;
   &__item {
     display: flex;
     justify-content: center;
   }
 // добавила слайдер, но именно по макету выровнять не получается
   &__list {
-    max-width: 1000px;
+    max-width: 1180px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // margin: 0 auto;
+     margin: 0 40px;
   }
 
   &__img {
@@ -23,21 +24,9 @@
     }
   }
 }
-// попытка центрировать картинки
-// .slick-slider .slick-list {
-//   display: flex;
-//   align-items: center;
-// }
-
 
 @media (max-width: $xl) {
   .partners {
-    padding: 55px 72px;
-  }
-}
-
-@media (max-width: $md) {
-  .partners {
-    padding: 48px 72px;
+    padding: 46px 72px;
   }
 }
