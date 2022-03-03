@@ -201,6 +201,11 @@
   &:active svg use {
     fill: rgba(255, 255, 255, 0.5);
   }
+
+  &.product-item--list {
+    max-width: 466px;
+    height: 162px;
+  }
 }
 
 

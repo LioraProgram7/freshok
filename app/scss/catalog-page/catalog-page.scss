@@ -1,0 +1,252 @@
+.catalog-page {
+  padding: 48px 72px;
+
+  &__title {
+    @extend %ruda-700;
+    font-size: 42px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__filter {
+    margin-right: 33px;
+  }
+}
+
+.filter-item {
+  border: 1px solid $silver-600;
+  border-radius: 6px;
+  width: 300px;
+  margin-bottom: 30px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 24px 18px 18px;
+    border-bottom: 1px solid $silver-600;
+  }
+
+  &__btn {
+    @extend %none-btn;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/chevron.svg');
+      width: 18px;
+      height: 11px;
+      top: 10px;
+      right: 0px;
+    }
+  }
+
+  &__title {
+    @extend %ruda-400;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+  }
+}
+
+.filter-categories {
+  &__list {
+    padding: 18px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &__button-list {
+    @extend %none-btn;
+    @extend %filter-text;
+    cursor: pointer;
+  }
+}
+
+.filter {
+  &__bottom {
+    padding: 18px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 12px;
+    padding-left: 36px;
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked+.filter__checkbox {
+      background-image: url('../images/icons/vector-filter.svg');
+      @extend %bg-img;
+      background-size: auto;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: $silver-100;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    margin-left: -35px;
+  }
+
+  &__text {
+    @extend %filter-text;
+  }
+}
+
+.filter-price {
+  &__form {
+    padding: 22px 18px 18px 18px;
+
+  }
+
+  &__box {
+    @extend %ruda-400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #C1C1C1;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__from,
+  &__to {
+    padding: 12px 20px;
+    background: #F6F6F6;
+    border: 1px solid $silver-100;
+    border-radius: 3px;
+    color: #505050;
+    display: inline-block;
+  }
+}
+
+.irs--flat .irs-bar {
+  top: 25px;
+  height: 2px;
+  background-color: $green-900;
+}
+
+.irs--flat .irs-line {
+  top: 25px;
+  height: 2px;
+  background-color: #C4C4C4;
+  border-radius: 4px;
+}
+
+.irs--flat .irs-handle {
+  top: 17px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $green-900;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  display: none;
+}
+
+.catalog-page {
+  &__filter-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__filter-btn {
+    @extend %none-btn;
+    cursor: pointer;
+
+    &.catalog-page__filter-btn--active {
+      path {
+        fill: $green-900;
+      }
+    }
+  }
+
+  &__filter-number {
+    margin-right: 15px;
+  }
+
+  &__content-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+  }
+
+  // .product-item:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+}
+
+.button-list {
+  margin-right: 15px;
+}
+
+.jq-selectbox__select {
+  height: 47px;
+  padding: 15px 42px 15px 11px;
+  border: 1px solid #ccc;
+  border-bottom-color: #b3b3b3;
+  border-radius: 3px;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;
+  color: #505050;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  @extend %opensans-400;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox.focused .jq-selectbox__select {
+  border: 1px solid transparent;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  width: 11px;
+  height: 6px;
+  border: none;
+  background-image: url('../images/icons/chevron-select.svg');
+}

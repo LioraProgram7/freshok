@@ -37,7 +37,7 @@ $xxl: 1290px;
   font-weight: 700;
 }
 
-%ruda-600 {
+%ruda-400 {
   font-family: 'Ruda-Regular', sans-serif;
   font-weight: 400;
 }
@@ -47,7 +47,7 @@ $xxl: 1290px;
   font-weight: 600;
 }
 
-%ruda-900 {
+%ruda-700 {
   font-family: 'Ruda-Bold', sans-serif;
   font-weight: 700;
 }
@@ -79,3 +79,17 @@ $xxl: 1290px;
   background-position: center;
 }
 
+%checkbox-hidden {
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   position: absolute;
+}
+
+%filter-text {
+   font-size: 18px;
+   line-height: 1.2;
+   letter-spacing: 0.03em;
+   color: $dark-500;
+}
