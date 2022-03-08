@@ -3,6 +3,10 @@ $(function () {
   // для категорий чтобы скрыть 
   $('.filter-item__btn').on('click', function () {
     $('.filter-categories__list').slideToggle();
+    // пыталась сделать чтобы стрелка при открытии поворачивалась но не работает
+    //  $('.filter-item__btn').on('click', function () {
+    //    $(this).toggleClass('transform');
+    //  });
   });
 
   $('.filter-item__btn--click1').on('click', function () {
