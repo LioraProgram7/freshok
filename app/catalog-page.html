@@ -117,9 +117,13 @@
 
     <!-- для адаптива. отдельно файл scss - mob-menu -->
     <nav class="mob-menu">
-      <a class="logo-green" href="#">
-        <img class="logo-green__img" src="images/logo-green.svg" alt="логотип" width="190" height="60">
-      </a>
+      <div class="mob-menu__top">
+        <a class="logo-green" href="#">
+          <img class="logo-green__img" src="images/logo-green.svg" alt="логотип" width="190" height="60">
+        </a>
+        <button class="mob-menu__btn btn__close "></button>
+      </div>
+
 
       <div class="mob-menu__profile">
         <a class="header-bottom__user-link" href="#" aria-label="личный кабинет">
@@ -133,14 +137,14 @@
       </div>
       <button class="header-bottom__btn" type="button">Каталог товаров</button>
 
-      <address class="mob-menu__contact">
+      <div class="mob-menu__contact">
         <a class="mob-menu__info mob-menu__info--tell" href="tel:+7907288365">
           +7 907 288 365
         </a>
         <a class="mob-menu__info mob-menu__info--address" href="#">
           Санкт-Петербург, ул. Ленина, 1
         </a>
-      </address>
+      </div>
 
       <ul class="mob-menu__social">
         <li class="mob-menu__social-list">
@@ -230,6 +234,25 @@
 
 
   <main class="main">
+    <!-- css в global -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Главная
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link" href="#">
+              Каталог товаров
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <section class="catalog-page">
       <div class="container">
         <h2 class="catalog-page__title">
@@ -237,7 +260,9 @@
         </h2>
 
         <div class="catalog-page__inner">
+          <!-- анимация категорий хромает, при нажатии на кнопку (стрелочку) чтобы свернуть или развернуть определенную категорию, срабатывает и на другие категории, искала в инете как исправить но не нашла -->
           <div class="catalog-page__filter filter">
+            <button class="catalog-page__btn btn__close"></button>
             <div class="filter-item filter-categories">
               <div class="filter-item__top">
                 <h3 class="filter-item__title">
@@ -277,6 +302,38 @@
                 <li class="filter-categories__item">
                   <button class="filter-categories__button-list" type="button">Алкоголь</button>
                 </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Овощи и фрукты</button>
+                </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Бакалея</button>
+                </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Молочные продукты</button>
+                </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Хлеб</button>
+                </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Мясо</button>
+                </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Колбаса</button>
+                </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Рыба</button>
+                </li>
+
+                <li class="filter-categories__item">
+                  <button class="filter-categories__button-list" type="button">Алкоголь</button>
+                </li>
               </ul>
             </div>
 
@@ -285,9 +342,9 @@
                 <h3 class="filter-item__title">
                   Предложения
                 </h3>
-                <button class="filter-item__btn"></button>
+                <button class="filter-item__btn filter-item__btn--click1"></button>
               </div>
-              <div class="filter__bottom">
+              <div class="filter__bottom filter__bottom-app">
                 <form class="filter__form" action="#">
                   <label class="filter__label">
                     <input class="filter__input" type="checkbox">
@@ -317,9 +374,9 @@
                 <h3 class="filter-item__title">
                   Бренд
                 </h3>
-                <button class="filter-item__btn"></button>
+                <button class="filter-item__btn filter-item__btn--click2"></button>
               </div>
-              <div class="filter__bottom">
+              <div class="filter__bottom filter__bottom-brand">
                 <form class="filter__form" action="#">
                   <label class="filter__label">
                     <input class="filter__input" type="checkbox">
@@ -370,7 +427,7 @@
                 <h3 class="filter-item__title">
                   Цена
                 </h3>
-                <button class="filter-item__btn"></button>
+                <button class="filter-item__btn filter-item__btn--click3"></button>
               </div>
               <form class="filter-price__form" action="#">
                 <label class="filter-price__label">
@@ -391,20 +448,23 @@
 
           <div class="catalog-page__content">
             <div class="catalog-page__filter-wrapper">
+              <button class="catalog-page__button-filters"></button>
               <div class="catalog-page__filter-box">
                 <form class="catalog-page__filter-form" action="#">
                   <select class="catalog-page__filter-name select-style">
                     <option value="">По названию</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
+                    <option value="">По популярности</option>
+                    <option value="">Сначала дешевые</option>
+                    <option value="">Сначала дорогие</option>
+                    <option value="">По алфавиту</option>
                   </select>
 
                   <select class="catalog-page__filter-number select-style">
                     <option value="">по 12</option>
-                    <option value="">2</option>
-                    <option value="">3</option>
-                    <option value="">4</option>
+                    <option value="">по 18</option>
+                    <option value="">по 24</option>
+                    <option value="">по 30</option>
+                    <option value="">по 36</option>
                   </select>
                 </form>
               </div>
@@ -466,12 +526,8 @@
                 </button>
               </div>
             </div>
-
-
-
-
-
-            <!-- карточки товаров -->
+            
+            <!-- при переключении на  карточки поменьше, видно как они сьезжают уменьшаясь, мне это не очень нравиться. как можно это исправить?-->
             <div class="catalog-page__content-inner">
               <article class="product-item mix category-fruit">
                 <div class="product-item__top">
@@ -492,27 +548,27 @@
                 </div>
                 <div class="product-item__img-box">
                   <a class="product-item__img-link" href="#">
-                    <img class="product-item__images" src="images/product/pineapple.jpg" width="300" height="215"
-                      alt="ананас">
+                    <img class="product-item__images" src="images/product/lifeline.jpg" width="300" height="215"
+                      alt="напиток lifeline">
                   </a>
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">в наличии</span>
+                  <span class="product-item__rating">3.5</span>
                 </div>
 
                 <h3 class="product-item__title">
-                  Ананас, 1кг
+                  Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л
                 </h3>
                 <div class="product-item__price">
                   <div class="product-item__price-all">
                     <p class="product-item__old-price">
-                      1999
+                      149
                       <span class="product-item__rub">₽</span>
                     </p>
                     <p class="product-item__new-price">
-                      999
+                      99
                       <span class="product-item__rub">₽</span>
                     </p>
                   </div>
@@ -544,8 +600,8 @@
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">в наличии</span>
+                  <span class="product-item__rating">4.5</span>
                 </div>
 
                 <h3 class="product-item__title">
@@ -589,8 +645,8 @@
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">в наличии</span>
+                  <span class="product-item__rating">4.5</span>
                 </div>
 
                 <h3 class="product-item__title">
@@ -600,178 +656,6 @@
                   <div class="product-item__price-all">
                     <p class="product-item__new-price">
                       1019
-                      <span class="product-item__rub">₽</span>
-                    </p>
-                  </div>
-                  <button class="product-item__cart" type="button">
-                    <svg width="16" height="16">
-                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
-              <!-- <article class="product-item mix category-fruit">
-                <div class="product-item__top">
-                  <div class="product-item__span">
-                    <span class="product-item__badge product-item__badge--new">
-                      новинка
-                    </span>
-                    <span class="product-item__badge product-item__badge--sale">
-                      -50%
-                    </span>
-                  </div>
-                  <button class="product-item__heart" type="button">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-heart-product">
-                      </use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="product-item__img-box">
-                  <a class="product-item__img-link" href="#">
-                    <img class="product-item__images" src="images/product/pineapple.jpg" width="300" height="215"
-                      alt="ананас">
-                  </a>
-                </div>
-
-                <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
-                </div>
-
-                <h3 class="product-item__title">
-                  Ананас, 1кг
-                </h3>
-                <div class="product-item__price">
-                  <div class="product-item__price-all">
-                    <p class="product-item__old-price">
-                      1999
-                      <span class="product-item__rub">₽</span>
-                    </p>
-                    <p class="product-item__new-price">
-                      999
-                      <span class="product-item__rub">₽</span>
-                    </p>
-                  </div>
-                  <button class="product-item__cart" type="button">
-                    <svg width="16" height="16">
-                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
-              <article class="product-item mix category-fruit">
-                <div class="product-item__top">
-                  <div class="product-item__span"></div>
-                  <button class="product-item__heart" type="button">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-heart-product">
-                      </use>
-                    </svg>
-                    </svg>
-                  </button>
-
-                </div>
-                <div class="product-item__img-box">
-                  <a class="product-item__img-link" href="#">
-                    <img class="product-item__images" src="images/product/lemon.jpg" width="300" height="215"
-                      alt="лимон">
-                  </a>
-                </div>
-
-                <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
-                </div>
-
-                <h3 class="product-item__title">
-                  Лимон, 1кг
-                </h3>
-                <div class="product-item__price">
-                  <div class="product-item__price-all">
-                    <p class="product-item__new-price">
-                      199
-                      <span class="product-item__rub">₽</span>
-                    </p>
-                  </div>
-                  <button class="product-item__cart" type="button">
-                    <svg width="16" height="16">
-                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
-              <article class="product-item mix category-fruit">
-                <div class="product-item__top">
-                  <div class="product-item__span">
-                    <span class="product-item__badge product-item__badge--hit">
-                      хит
-                    </span>
-                  </div>
-                  <button class="product-item__heart" type="button">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-heart-product">
-                      </use>
-                    </svg>
-                  </button>
-
-                </div>
-                <div class="product-item__img-box">
-                  <a class="product-item__img-link" href="#">
-                    <img class="product-item__images" src="images/product/dragon.jpg" width="300" height="215"
-                      alt="питахая">
-                  </a>
-                </div>
-
-                <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
-                </div>
-
-                <h3 class="product-item__title">
-                  Питахайя красная с белой мякотью, 1шт
-                </h3>
-                <div class="product-item__price">
-                  <div class="product-item__price-all">
-                    <p class="product-item__new-price">
-                      1019
-                      <span class="product-item__rub">₽</span>
-                    </p>
-                  </div>
-                  <button class="product-item__cart" type="button">
-                    <svg width="16" height="16">
-                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
-                    </svg>
-                  </button>
-                </div>
-              </article>
-
-              <article class="product-item mix category-grocery">
-                <div class="product-item__top">
-                  <div class="product-item__span"></div>
-                  <button class="product-item__heart" type="button">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-heart-product">
-                      </use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="product-item__img-box">
-                  <a class="product-item__img-link" href="#">
-                    <img class="product-item__images" src="images/product/ketchup.jpg" width="300" height="215"
-                      alt="кетчуп">
-                  </a>
-                </div>
-                <h3 class="product-item__title">
-                  Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
-                </h3>
-                <div class="product-item__price">
-                  <div class="product-item__price-all">
-                    <p class="product-item__new-price">
-                      600
                       <span class="product-item__rub">₽</span>
                     </p>
                   </div>
@@ -805,8 +689,8 @@
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">нет в наличии</span>
+                  <span class="product-item__rating">4.5</span>
                 </div>
 
                 <h3 class="product-item__title">
@@ -850,8 +734,8 @@
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">в наличии</span>
+                  <span class="product-item__rating">4.5</span>
                 </div>
 
                 <h3 class="product-item__title">
@@ -898,8 +782,8 @@
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">заканчивается</span>
+                  <span class="product-item__rating">4.5</span>
                 </div>
 
                 <h3 class="product-item__title">
@@ -942,8 +826,8 @@
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">заканчивается</span>
+                  <span class="product-item__rating">4.5</span>
                 </div>
 
                 <h3 class="product-item__title">
@@ -965,7 +849,191 @@
                 </div>
               </article>
 
+              <article class="product-item mix category-grocery">
+                <div class="product-item__top">
+                  <div class="product-item__span"></div>
+                  <button class="product-item__heart" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-heart-product">
+                      </use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-item__img-box">
+                  <a class="product-item__img-link" href="#">
+                    <img class="product-item__images" src="images/product/ketchup.jpg" width="300" height="215"
+                      alt="кетчуп">
+                  </a>
+                </div>
+
+                <div class="product-item__info">
+                  <span class="product-item__status">в наличии</span>
+                  <span class="product-item__rating">4.5</span>
+                </div>
+
+                <h3 class="product-item__title">
+                  Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+                </h3>
+                <div class="product-item__price">
+                  <div class="product-item__price-all">
+                    <p class="product-item__new-price">
+                      600
+                      <span class="product-item__rub">₽</span>
+                    </p>
+                  </div>
+                  <button class="product-item__cart" type="button">
+                    <svg width="16" height="16">
+                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-item mix category-fruit">
+                <div class="product-item__top">
+                  <div class="product-item__span">
+                    <span class="product-item__badge product-item__badge--new">
+                      новинка
+                    </span>
+                    <span class="product-item__badge product-item__badge--sale">
+                      -50%
+                    </span>
+                  </div>
+                  <button class="product-item__heart" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-heart-product">
+                      </use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-item__img-box">
+                  <a class="product-item__img-link" href="#">
+                    <img class="product-item__images" src="images/product/pineapple.jpg" width="300" height="215"
+                      alt="ананас">
+                  </a>
+                </div>
+
+                <div class="product-item__info">
+                  <span class="product-item__status">в наличии</span>
+                  <span class="product-item__rating">4.5</span>
+                </div>
+
+                <h3 class="product-item__title">
+                  Ананас, 1кг
+                </h3>
+                <div class="product-item__price">
+                  <div class="product-item__price-all">
+                    <p class="product-item__old-price">
+                      1999
+                      <span class="product-item__rub">₽</span>
+                    </p>
+                    <p class="product-item__new-price">
+                      999
+                      <span class="product-item__rub">₽</span>
+                    </p>
+                  </div>
+                  <button class="product-item__cart" type="button">
+                    <svg width="16" height="16">
+                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
               <article class="product-item mix category-vegetables">
+                <div class="product-item__top">
+                  <div class="product-item__span">
+                    <span class="product-item__badge product-item__badge--hit">
+                      хит
+                    </span>
+                  </div>
+                  <button class="product-item__heart" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-heart-product">
+                      </use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-item__img-box">
+                  <a class="product-item__img-link" href="#">
+                    <img class="product-item__images" src="images/product/carrot.jpg" width="300" height="215"
+                      alt="морковь">
+                  </a>
+                </div>
+
+                <div class="product-item__info">
+                  <span class="product-item__status">заканчивается</span>
+                  <span class="product-item__rating">4.5</span>
+                </div>
+
+                <h3 class="product-item__title">
+                  Морковь молодая с бабушкиной грядки, 1кг
+                </h3>
+                <div class="product-item__price">
+                  <div class="product-item__price-all">
+                    <p class="product-item__new-price">
+                      49
+                      <span class="product-item__rub">₽</span>
+                    </p>
+                  </div>
+
+                  <button class="product-item__cart" type="button">
+                    <svg width="16" height="16">
+                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-item mix category-beverages">
+                <div class="product-item__top">
+                  <div class="product-item__span">
+                    <span class="product-item__badge product-item__badge--sale">
+                      -30%
+                    </span>
+                  </div>
+                  <button class="product-item__heart" type="button">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-heart-product">
+                      </use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product-item__img-box">
+                  <a class="product-item__img-link" href="#">
+                    <img class="product-item__images" src="images/product/juice.jpg" width="300" height="215"
+                      alt="напиток сокосодержащий апельсиновый">
+                  </a>
+                </div>
+
+                <div class="product-item__info">
+                  <span class="product-item__status">в наличии</span>
+                  <span class="product-item__rating">4.5</span>
+                </div>
+
+                <h3 class="product-item__title">
+                  Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+                </h3>
+                <div class="product-item__price">
+                  <div class="product-item__price-all">
+                    <p class="product-item__old-price">
+                      299
+                      <span class="product-item__rub">₽</span>
+                    </p>
+                    <p class="product-item__new-price">
+                      199
+                      <span class="product-item__rub">₽</span>
+                    </p>
+                  </div>
+                  <button class="product-item__cart" type="button">
+                    <svg width="16" height="16">
+                      <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <article class="product-item mix category-grocery">
                 <div class="product-item__top">
                   <div class="product-item__span">
                     <span class="product-item__badge product-item__badge--new">
@@ -981,39 +1049,92 @@
                 </div>
                 <div class="product-item__img-box">
                   <a class="product-item__img-link" href="#">
-                    <img class="product-item__images" src="images/product/paprik.jpg" width="300" height="215"
-                      alt="паприка">
+                    <img class="product-item__images" src="images/product/coffee.jpg" width="300" height="215"
+                      alt="коффе">
                   </a>
                 </div>
 
                 <div class="product-item__info">
-                  <span class="product-item__status"></span>
-                  <span class="product-item__rating"></span>
+                  <span class="product-item__status">заканчивается</span>
+                  <span class="product-item__rating">4.5</span>
                 </div>
 
                 <h3 class="product-item__title">
-                  Перец оранжевый, 1кг
+                  Кофе с коноплей органический Caffé Salomoni 250г
                 </h3>
                 <div class="product-item__price">
                   <div class="product-item__price-all">
                     <p class="product-item__new-price">
-                      349
+                      877
                       <span class="product-item__rub">₽</span>
                     </p>
                   </div>
-
                   <button class="product-item__cart" type="button">
                     <svg width="16" height="16">
                       <use xlink:href="images/sprite.svg#icon-cart-product"></use>
                     </svg>
                   </button>
                 </div>
-              </article> -->
+              </article>
             </div>
 
-          </div>
+            <div class="catalog-page__bottom">
+              <a class="catalog-page__link btn-show btn-show__mini" href="#">Показать еще</a>
+              <div class="pagination">
+                <span class="pagination__prev pagination__arrows" href="#"></span>
 
+                <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--active" href="#">1</a>
+                  </li>
+                  <li class="pagination__item pagination__item--hide">
+                    <a class="pagination__link" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <span class="pagination__link" href="#">...</span>
+                  </li>
+                  <li class="pagination__item pagination__item--hide">
+                    <a class="pagination__link" href="#">9</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">10</a>
+                  </li>
+                </ul>
+
+                <a class="pagination__next pagination__arrows" href="#"></a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <h2 class="sr-only">Услуги и помощь</h2>
+      <div class="container">
+
+        <ul class="service__inner">
+          <li class="service__item service__item--scooter">
+            <h3 class="service__name">Бесплатная доставка</h3>
+            <p class="service__text">
+              Для заказов на сумму от 500 ₽
+            </p>
+          </li>
+
+          <li class="service__item service__item--box">
+            <h3 class="service__name">Возврат товара</h3>
+            <p class="service__text">
+              Если товары были испорчены
+            </p>
+          </li>
+
+          <li class="service__item service__item--24-hours">
+            <h3 class="service__name">Поддержка 24/7</h3>
+            <p class="service__text">
+              Лучшие операторы
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -1126,16 +1247,17 @@
 
         </div>
       </div>
+    </div>
 
-      <div class="footer-bottom">
-        <div class="footer-bottom__wrap">
-          <p class="footer-bottom__text">© 2021 фрешок</p>
-          <div class="footer-bottom__img ">
-            <img class="footer-bottom__img--viza" src="images/icons/icon-visa.svg" width="93" height="29" alt="viza">
-            <img class="footer-bottom__img--mc" src="images/icons/icon-mc.svg" width="49" height="29" alt="mastercard">
-          </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom__wrap">
+        <p class="footer-bottom__text">© 2021 фрешок</p>
+        <div class="footer-bottom__img ">
+          <img class="footer-bottom__img--viza" src="images/icons/icon-visa.svg" width="93" height="29" alt="viza">
+          <img class="footer-bottom__img--mc" src="images/icons/icon-mc.svg" width="49" height="29" alt="mastercard">
         </div>
       </div>
+    </div>
   </footer>
 
 

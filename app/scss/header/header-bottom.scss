@@ -44,7 +44,7 @@
   }
 
   &__btn::before {
-    background-image: url(../images/icons/nav_icon.svg);
+    background-image: url('../images/icons/nav_icon.svg');
     width: 25px;
     height: 17px;
     top: 16px;
@@ -52,7 +52,7 @@
   }
 
   &__btn::after {
-    background-image: url(../images/icons/icon-chevron.svg);
+    background-image: url('../images/icons/icon-chevron.svg');
     width: 10px;
     height: 7.23px;
     top: 21px;
@@ -232,7 +232,11 @@
 
 @media (max-width: $lg) {
   .header-bottom {
-    padding-top: 48px;
+       position: fixed;
+       left: 0;
+       width: 100%;
+       z-index: 999;
+       margin-top: 49px;
 
     &__inner {
       padding: 11px 0;
@@ -261,7 +265,7 @@
         transform: all 0.7s;
       }
 
-// при клике на поиск зеденый хеадер делается шире
+// при клике на поиск зеденый хеадер делается шире как исправить этот косяк?
     &__search.active {
       display: flex;
       z-index: 10;

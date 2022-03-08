@@ -14,6 +14,18 @@ body {
   flex-direction: column;
 }
 
+body.overlay::before {
+  content: '';
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  z-index: 1;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -144,6 +156,7 @@ body {
     color: $white;
     transition: background-color 0.5s,
       box-shadow 0.5s;
+    z-index: 2;
 
     &:hover {
       background-color: #4D810C;
@@ -230,6 +243,49 @@ body {
   }
 }
 
+.breadcrumbs {
+  padding: 24px 0;
+  background-color: $silver-100;
+
+  &__list {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__item {
+    position: relative;
+    padding-right: 16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/arrow-breadcrumbs.svg');
+      width: 6px;
+      height: 10px;
+      top: 4px;
+      right: 4px;
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+  }
+}
+
+.btn__close {
+  display: none;
+}
+
+
 @media (max-width: $xl) {
   .indent {
     padding: 55px 0;
@@ -237,6 +293,31 @@ body {
 
   .indent-bottom {
     padding-bottom: 55px;
+  }
+}
+
+@media (max-width: $lg) {
+  .btn__close {
+    display: block;
+    position: relative;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/close-btn.svg');
+      width: 18px;
+      height: 18px;
+      top: 12px;
+      left: 270px;
+    }
+  }
+
+  .breadcrumbs {
+    margin-top: 111px;
   }
 }
 
@@ -265,5 +346,13 @@ body {
 
   .indent-bottom {
     padding-bottom: 47px;
+  }
+
+  .pagination {
+    justify-content: center;
+
+    &__item--hide {
+      display: none;
+    }
   }
 }

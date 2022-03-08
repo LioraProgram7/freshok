@@ -70,6 +70,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 999;
 
     &__link {
       color: transparent;
@@ -139,23 +140,8 @@
       transition: all 0.3s ease 0s;
     }
   }
-// не понимаю почему не видно бургер, зет индекс не помогает
-// и еще не пойму почему в обычном состоянии крестик, а при нажатии на бургер обычное состояние
+
   .menu__btn.active {
     z-index: 999;
-  }
-
-  .menu__btn::before {
-    transform: rotate(45deg);
-    top: 9px;
-  }
-
-  .menu__btn::after {
-    transform: rotate(-45deg);
-    bottom: 9px;
-  }
-
-  .menu__btn span {
-    transform: scale(0);
   }
 }

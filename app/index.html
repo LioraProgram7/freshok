@@ -117,9 +117,13 @@
 
     <!-- для адаптива. отдельно файл scss - mob-menu -->
     <nav class="mob-menu">
-      <a class="logo-green" href="#">
-        <img class="logo-green__img" src="images/logo-green.svg" alt="логотип" width="190" height="60">
-      </a>
+      <div class="mob-menu__top">
+        <a class="logo-green" href="#">
+          <img class="logo-green__img" src="images/logo-green.svg" alt="логотип" width="190" height="60">
+        </a>
+        <button class="mob-menu__btn btn__close "></button>
+      </div>
+
 
       <div class="mob-menu__profile">
         <a class="header-bottom__user-link" href="#" aria-label="личный кабинет">
@@ -133,14 +137,14 @@
       </div>
       <button class="header-bottom__btn" type="button">Каталог товаров</button>
 
-      <address class="mob-menu__contact">
+      <div class="mob-menu__contact">
         <a class="mob-menu__info mob-menu__info--tell" href="tel:+7907288365">
           +7 907 288 365
         </a>
         <a class="mob-menu__info mob-menu__info--address" href="#">
           Санкт-Петербург, ул. Ленина, 1
         </a>
-      </address>
+      </div>
 
       <ul class="mob-menu__social">
         <li class="mob-menu__social-list">
@@ -232,7 +236,7 @@
   <main class="main">
     <section class="slider-top">
       <h2 class="sr-only">Фрешок Онлайн-Маркет Скидки</h2>
-
+<!-- когда уменьшаю экран пропадают фоновые картинки, просто белый фон вместо них, не пойму в чем проблема, раньше такого не было. Обновляю страницу они опоявляются, начинаю опять уменьшать экран и они пропадают и так по кругу -->
       <ul class="slider-top__inner">
         <li class="slider-top__item" style="background-image: url('images/slider/top-slider1.jpg');">
           <div class="container">
@@ -251,7 +255,7 @@
           </div>
         </li>
 
-        <li class="slider-top__item" style=" background-image: url(images/slider/top-slider2.jpg);">
+        <li class="slider-top__item" style=" background-image: url('images/slider/top-slider2.jpg');">
           <div class="container">
             <div class="slider-top__content">
               <div class="slider-top__name">
@@ -411,7 +415,6 @@
                   <svg>
                     <use xlink:href="images/sprite.svg#icon-heart-product">
                     </use>
-                  </svg>
                   </svg>
                 </button>
 
@@ -1337,16 +1340,17 @@
 
         </div>
       </div>
+    </div>
 
-      <div class="footer-bottom">
-        <div class="footer-bottom__wrap">
-          <p class="footer-bottom__text">© 2021 фрешок</p>
-          <div class="footer-bottom__img ">
-            <img class="footer-bottom__img--viza" src="images/icons/icon-visa.svg" width="93" height="29" alt="viza">
-            <img class="footer-bottom__img--mc" src="images/icons/icon-mc.svg" width="49" height="29" alt="mastercard">
-          </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom__wrap">
+        <p class="footer-bottom__text">© 2021 фрешок</p>
+        <div class="footer-bottom__img ">
+          <img class="footer-bottom__img--viza" src="images/icons/icon-visa.svg" width="93" height="29" alt="viza">
+          <img class="footer-bottom__img--mc" src="images/icons/icon-mc.svg" width="49" height="29" alt="mastercard">
         </div>
       </div>
+    </div>
   </footer>
 
 

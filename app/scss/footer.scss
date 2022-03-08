@@ -1,6 +1,7 @@
 .footer {
   background-color: $dark-800;
   letter-spacing: 0;
+  z-index: 2;
 }
 
 .footer-top {
@@ -211,6 +212,19 @@
   .footer-top {
     &__list {
       column-count: 2;
+      text-align: left;
+    }
+
+    &__list-item {
+      transform: translateX(48px);
+    }
+
+    &__text {
+      transform: translateX(-52px);
+    }
+
+    &__btn {
+      max-width: 118px;
     }
   }
 

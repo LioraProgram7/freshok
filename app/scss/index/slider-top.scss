@@ -92,6 +92,7 @@ svg rect {
   margin-right: 60px;
 }
 
+// не работает disabled, раньше все работало прекрасно, почему перестало причину не могу найти
 .slick-disabled svg path {
   fill: #C1C1C1;
 }
@@ -125,7 +126,8 @@ svg rect {
       width: 10px;
       height: 10px;
       background-color: $white;
-      border: 1px solid #C1C1C1;
+      // не понимаю почему не работает бордер
+      border: 1px solid $silver-600;
       border-radius: 50%;
       padding: 0;
       border: none;
@@ -145,6 +147,12 @@ svg rect {
     .container {
       padding: 0;
     }
+  }
+}
+
+@media (max-width: $lg) {
+  .slider-top {
+    margin-top: 111px;
   }
 }
 
@@ -199,5 +207,4 @@ svg rect {
   .slick-dots {
     transform: translateY(-36px);
   }
-
 }
