@@ -3,7 +3,7 @@
   max-height: 600px;
 
 
-  &__item {
+  &__item-img {
     padding: 142px;
     @extend %bg-img;
   }
@@ -92,7 +92,6 @@ svg rect {
   margin-right: 60px;
 }
 
-// не работает disabled, раньше все работало прекрасно, почему перестало причину не могу найти
 .slick-disabled svg path {
   fill: #C1C1C1;
 }
@@ -126,11 +125,10 @@ svg rect {
       width: 10px;
       height: 10px;
       background-color: $white;
-      // не понимаю почему не работает бордер
       border: 1px solid $silver-600;
       border-radius: 50%;
       padding: 0;
-      border: none;
+
     }
 
     .slick-active button {
@@ -140,7 +138,7 @@ svg rect {
   }
 
   .slider-top {
-    &__item {
+    &__item-img {
       padding: 142px 0;
     }
 
@@ -157,12 +155,16 @@ svg rect {
 }
 
 @media (max-width: $md) {
+  .slick-dots {
+    transform: translateY(-60px);
+  }
+
   .slider-top {
     max-height: 385px;
 
-    &__item {
-      padding: 80px 0;
-    }
+     &__item-img {
+       padding: 80px 0;
+     }
 
     &__content {
       padding: 15px;
@@ -184,10 +186,6 @@ svg rect {
       font-size: 14px;
     }
   }
-
-  .slick-dots {
-    transform: translateY(-60px);
-  }
 }
 
 @media (max-width: $sm) {
@@ -199,12 +197,12 @@ svg rect {
       font-size: 20px;
     }
 
-    &__item {
+    &__item-img {
       padding: 60px 0 50px;
     }
   }
 
-  .slick-dots {
-    transform: translateY(-36px);
-  }
+  // .slick-dots {
+  //   transform: translateY(-36px);
+  // }
 }

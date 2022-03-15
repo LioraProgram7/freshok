@@ -1,5 +1,3 @@
-// посмотри пожалуйста при проверке на пиксель перфект ширину самого макета 375px у меня он чутка шире, 390px, проверяла настройки, выставлена 1 (scale) как и должно быть
-
 .catalog-page {
   padding: 48px 0 73px;
 
@@ -10,7 +8,7 @@
     letter-spacing: 0.03em;
     color: $dark-900;
     text-align: left;
-    margin-bottom: 48px;
+    margin-bottom: 45px;
   }
 
   &__inner {
@@ -31,9 +29,19 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: 18px 24px 18px 18px;
+    padding: 16px 24px 15px 18px;
     border-bottom: 1px solid $silver-600;
+
+    &-brand {
+      padding: 12px 24px 15px 18px;
+    }
+
+    &-price {
+      padding: 13px 24px 15px 18px;
+    }
   }
+
+
 
   &__btn {
     @extend %none-btn;
@@ -50,9 +58,10 @@
       top: 10px;
       right: 0px;
     }
-    // .transform::after {
-    //   transform: rotate(180deg);
-    // }
+
+    &.transform::after {
+      transform: rotate(180deg);
+    }
   }
 
   &__title {
@@ -66,7 +75,7 @@
 .filter-categories {
   &__list {
     padding: 18px;
-    height: 290px;
+    height: 298px;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
@@ -81,13 +90,21 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
   }
 
   &__button-list {
     @extend %none-btn;
     @extend %filter-text;
     cursor: pointer;
+    width: 100%;
+    text-align-last: left;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $green-900;
+
+    }
   }
 }
 
@@ -97,12 +114,19 @@
   }
 
   &__form:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
 
   &__label {
     display: block;
     padding-left: 36px;
+    cursor: pointer;
+  }
+
+  &__label:hover {
+    .filter__checkbox {
+      border-color: $dark-500;
+    }
   }
 
   &__input {
@@ -123,21 +147,22 @@
     border: 1px solid $silver-600;
     border-radius: 3px;
     margin-left: -35px;
-
-    &:hover {
-      border-color: $dark-500;
-    }
   }
 
   &__text {
     @extend %filter-text;
   }
+
+
+}
+
+.filter-brand {
+  margin-bottom: 25px;
 }
 
 .filter-price {
   &__form {
-    padding: 22px 18px 18px 18px;
-
+    padding: 19px 18px 18px 18px;
   }
 
   &__box {
@@ -221,11 +246,12 @@
   .product-item {
     &__info {
       display: flex;
+      position: relative;
+      justify-content: space-between;
+      padding: 1px 17px 6px 15px;
     }
 
     &__status {
-      position: absolute;
-      transform: translate(18px, -7px);
       text-transform: uppercase;
       font-size: 10px;
       line-height: 1;
@@ -234,8 +260,7 @@
 
     &__rating {
       position: relative;
-      left: 242px;
-      bottom: 6px;
+      padding-right: 19px;
       line-height: 1;
 
       &::before {
@@ -255,6 +280,14 @@
 
     &__price {
       padding: 0px 18px 11px 19px;
+    }
+
+    &__img-box {
+      margin-bottom: -1px;
+    }
+
+    &__old-price {
+      margin-left: 0;
     }
   }
 
@@ -302,7 +335,7 @@
         }
 
         &__img-link {
-          overflow: visible;
+          overflow: hidden;
         }
 
         &__top {
@@ -314,20 +347,19 @@
           width: 195px;
         }
 
+        &__info {
+          padding: 0px 19px 7px 218px;
+          margin-top: -4px;
+          transform: translateY(-193px);
+        }
+
         &__price {
-          width: 263px;
-          position: absolute;
-          transform: translate(202px, -177px);
+          padding: 0px 18px 11px 218px;
+          transform: translateY(-178px);
         }
 
-        &__status {
-          transform: translate(218px, -197px);
-        }
-
-        // при адаптиве рейтинг вылазит за пределы карточки, не получается сделать так чтобы он подстраивался под адаптивность карточки товара
-        &__rating {
-          left: 407px;
-          bottom: 199px;
+        &__old-price {
+          margin-left: 0;
         }
 
         &__heart {
@@ -500,8 +532,6 @@
   }
 }
 
-
-
 @media (max-width: $lg) {
   .catalog-page {
 
@@ -513,11 +543,21 @@
       top: 0;
       z-index: 999;
       transition: left 0.6s;
-      // не понимаю почему не работает скролл
       overflow-y: scroll;
+      height: 100vh;
 
       &.active {
         left: 0;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background-color: $white;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #C4C4C4;
       }
     }
 
@@ -592,20 +632,15 @@
 
     .product-item__status {
       font-size: 8px;
-      transform: translate(11px, -9px);
     }
 
     .product-item__rating {
-      left: 126px;
       font-size: 10px;
-      bottom: 10px;
     }
 
     .product-item__rating::before {
       width: 12px;
       height: 12px;
-      left: 17px;
-      bottom: 0;
       background-size: contain;
     }
   }

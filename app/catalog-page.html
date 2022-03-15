@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Фрешок Онлайн-Маркет|Главная страница</title>
+  <title>Фрешок Онлайн-Маркет|Страница каталога</title>
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -24,7 +24,7 @@
       <div class="container">
 
         <nav class="header-top__inner">
-          <button class="menu__btn active">
+          <button class="menu__btn active" type="button">
             <span class="row"></span>
           </button>
           <div class="header-top__info">
@@ -121,7 +121,7 @@
         <a class="logo-green" href="#">
           <img class="logo-green__img" src="images/logo-green.svg" alt="логотип" width="190" height="60">
         </a>
-        <button class="mob-menu__btn btn__close "></button>
+        <button class="mob-menu__btn btn__close" type="button"></button>
       </div>
 
 
@@ -245,7 +245,7 @@
           </li>
 
           <li class="breadcrumbs__item">
-            <span class="breadcrumbs__link" href="#">
+            <span class="breadcrumbs__link">
               Каталог товаров
             </span>
           </li>
@@ -262,13 +262,13 @@
         <div class="catalog-page__inner">
           <!-- анимация категорий хромает, при нажатии на кнопку (стрелочку) чтобы свернуть или развернуть определенную категорию, срабатывает и на другие категории, искала в инете как исправить но не нашла -->
           <div class="catalog-page__filter filter">
-            <button class="catalog-page__btn btn__close"></button>
+            <button class="catalog-page__btn btn__close" type="button"></button>
             <div class="filter-item filter-categories">
               <div class="filter-item__top">
                 <h3 class="filter-item__title">
                   Категории
                 </h3>
-                <button class="filter-item__btn"></button>
+                <button class="filter-item__btn" type="button"></button>
               </div>
               <ul class="filter-categories__list">
                 <li class="filter-categories__item">
@@ -338,30 +338,30 @@
             </div>
 
             <div class="filter-item filter-app">
-              <div class="filter-item__top">
+              <div class="filter-item__top filter-item__top--2">
                 <h3 class="filter-item__title">
                   Предложения
                 </h3>
-                <button class="filter-item__btn filter-item__btn--click1"></button>
+                <button class="filter-item__btn filter-item__btn--click1" type="button"></button>
               </div>
               <div class="filter__bottom filter__bottom-app">
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="discount">
+                    <input class="filter__input" type="checkbox" name="discount" id="discount">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">Со скидкой</span>
                   </label>
                 </form>
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox" checked>
+                  <label class="filter__label" for="new">
+                    <input class="filter__input" type="checkbox" name="new" id="new" checked>
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">Новинка</span>
                   </label>
                 </form>
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="hit">
+                    <input class="filter__input" type="checkbox" name="hit" id="hit">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">Хит</span>
                   </label>
@@ -370,51 +370,51 @@
             </div>
 
             <div class="filter-item filter-brand">
-              <div class="filter-item__top">
+              <div class="filter-item__top filter-item__top-brand">
                 <h3 class="filter-item__title">
                   Бренд
                 </h3>
-                <button class="filter-item__btn filter-item__btn--click2"></button>
+                <button class="filter-item__btn filter-item__btn--click2" type="button"></button>
               </div>
               <div class="filter__bottom filter__bottom-brand">
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="cocacola">
+                    <input class="filter__input" type="checkbox" name="cocacola" id="cocacola">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">CocaCola</span>
                   </label>
                 </form>
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="pepsi">
+                    <input class="filter__input" type="checkbox" name="cocacola" id="cocacola">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">Pepsi</span>
                   </label>
                 </form>
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="sprite">
+                    <input class="filter__input" type="checkbox" name="cocacola" id="cocacola">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">Sprite</span>
                   </label>
                 </form>
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="fanta">
+                    <input class="filter__input" type="checkbox" name="cocacola" id="cocacola">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">Fanta</span>
                   </label>
                 </form>
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="redBull">
+                    <input class="filter__input" type="checkbox" name="cocacola" id="cocacola">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">RedBull</span>
                   </label>
                 </form>
                 <form class="filter__form" action="#">
-                  <label class="filter__label">
-                    <input class="filter__input" type="checkbox">
+                  <label class="filter__label" for="pepper">
+                    <input class="filter__input" type="checkbox" name="cocacola" id="cocacola">
                     <span class="filter__checkbox"></span>
                     <span class="filter__text">Dr Pepper</span>
                   </label>
@@ -423,14 +423,14 @@
             </div>
 
             <div class="filter-item filter-price">
-              <div class="filter-item__top">
+              <div class="filter-item__top filter-item__top-price">
                 <h3 class="filter-item__title">
                   Цена
                 </h3>
-                <button class="filter-item__btn filter-item__btn--click3"></button>
+                <button class="filter-item__btn filter-item__btn--click3" type="button"></button>
               </div>
               <form class="filter-price__form" action="#">
-                <label class="filter-price__label">
+                <label class="filter-price__label" for="price">
                   <span class="filter-price__box">от
                     <span class="filter-price__from"></span> ₽
                   </span>
@@ -438,7 +438,7 @@
                     <span class="filter-price__to"></span> ₽
                   </span>
                 </label>
-                <input class="filter-price__input" type="text" data-min="0" data-max="1150" data-from="100"
+                <input class="filter-price__input" type="text" name="price" id="price" data-min="0" data-max="1150" data-from="100"
                   data-to="1000">
               </form>
 
@@ -448,7 +448,7 @@
 
           <div class="catalog-page__content">
             <div class="catalog-page__filter-wrapper">
-              <button class="catalog-page__button-filters"></button>
+              <button class="catalog-page__button-filters" type="button"></button>
               <div class="catalog-page__filter-box">
                 <form class="catalog-page__filter-form" action="#">
                   <select class="catalog-page__filter-name select-style">
@@ -469,7 +469,7 @@
                 </form>
               </div>
               <div class="catalog-page__filter-buttons">
-                <button class="catalog-page__filter-btn button-list">
+                <button class="catalog-page__filter-btn button-list" type="button">
                   <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="47" height="47" rx="3" fill="#F6F6F6" />
                     <path
@@ -492,7 +492,7 @@
                       fill="#C1C1C1" />
                   </svg>
                 </button>
-                <button class="catalog-page__filter-btn catalog-page__filter-btn--active button-grid">
+                <button class="catalog-page__filter-btn catalog-page__filter-btn--active button-grid" type="button">
                   <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="47" height="47" rx="3" fill="#F6F6F6" />
                     <path
@@ -526,8 +526,7 @@
                 </button>
               </div>
             </div>
-            
-            <!-- при переключении на  карточки поменьше, видно как они сьезжают уменьшаясь, мне это не очень нравиться. как можно это исправить?-->
+
             <div class="catalog-page__content-inner">
               <article class="product-item mix category-fruit">
                 <div class="product-item__top">
@@ -1081,7 +1080,7 @@
             <div class="catalog-page__bottom">
               <a class="catalog-page__link btn-show btn-show__mini" href="#">Показать еще</a>
               <div class="pagination">
-                <span class="pagination__prev pagination__arrows" href="#"></span>
+                <a class="pagination__prev pagination__arrows" href="#"></a>
 
                 <ul class="pagination__list">
                   <li class="pagination__item">
