@@ -231,8 +231,483 @@
       </ul>
     </nav>
   </header>
-  
+
   <main class="main">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Главная
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link">
+              Каталог товаров
+            </span>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__link">
+              Питахайя красная с белой мякотью
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="product-page">
+      <div class="container">
+        <div class="product-one">
+          <div class="product-one__inner">
+            <div class="product-one__slide product-slide">
+              <ul class="product-slide__list">
+                <li class="product-slide__item">
+                  <img class="product-slide__img" src="images/product-page/1.jpg" alt="питахая">
+                </li>
+
+                <!-- <li class="product-slide__item">
+                  <img class="product-slide__img" src="images/product-page/1.jpg" alt="питахая">
+                </li>
+
+                <li class="product-slide__item">
+                  <img class="product-slide__img" src="images/product-page/1.jpg" alt="питахая">
+                </li> -->
+              </ul>
+            </div>
+
+            <div class="product-content">
+              <h2 class="product-content__title">
+                Питахайя красная с белой мякотью
+              </h2>
+
+              <div class="product-content__info">
+                <span class="product-content__badge">хит</span>
+                <div class="product-content__box">
+                  <span class="product-content__code">Код: 0111111</span>
+                  <div class="product-content__star">
+                    <!-- не понимаю почему перестал работать рейтинг, не меняется значение рейтинга ни тут ни в js -->
+                    <div class="star" data-rateyo-rating="4"></div>
+                  </div>
+                  <span class="product-content__status">В наличии</span>
+                </div>
+                <div class="product-content__price">
+                  <span class="product-content__old-price">299 ₽</span>
+                  <span class="product-content__new-price">199 ₽</span>
+                </div>
+              </div>
+
+              <form class="product-content__form" action="#">
+                <input class="product-content__num" type="number" value="1" min="1">
+                <button class="product-content__btn" type="submit">добавить в корзину</button>
+                <button class="product-content__heart" type="button">
+                  <svg width="44" height="39">
+                    <use xlink:href="images/sprite.svg#heart-product-page" width="44" height="39">
+                    </use>
+                  </svg>
+                </button>
+              </form>
+
+              <h3 class="product-content__subtitle">
+                Доставка и оплата
+              </h3>
+              <p class="product-content__subtext">
+                Минимальная сумма заказа - 100 руб.<br>
+                Время доставки заказа - 60-120 мин.<br>
+                Оплата осуществляется только банковской картой.<br>
+                Окончательная сумма заказа формируется после сбора товаров.
+              </p>
+              <a class="product-content__more" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-tabs">
+        <div class="container product-tabs__container">
+          <div class="product-tabs__top">
+            <a class="product-tabs__top-item product-tabs__top-item--active" href="#tab-1">
+              описание
+            </a>
+            <a class="product-tabs__top-item" href="#tab-2">
+              характеристики
+            </a>
+            <a class="product-tabs__top-item" href="#tab-3">
+              отзывы (2)
+            </a>
+          </div>
+
+          <div class="product-tabs__content">
+            <div class="product-tabs__content-item product-tabs__content-item--active" id="tab-1">
+              <div class="product-tabs__content-description">
+                <p>Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
+                  укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу ЖКТ.
+                  Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении
+                  питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой системы.
+                  Так как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.</p>
+
+                <p>Витамины: С, Е, РР, витамины группы В</p>
+
+                <p>Микроэлементы: железо, калий, кальций, магний, фосфор</p>
+
+                <p>Внешний вид товара может отличаться от изображений, представленных на сайте.</p>
+              </div>
+
+            </div>
+
+            <div class="product-tabs__content-item" id="tab-2">
+              <ul class="product-tabs__characteristic">
+                <li class="product-tabs__info">
+                  <div class="product-tabs__subtitle">
+                    Вес:
+                  </div>
+                  <div class="product-tabs__text">
+                    250-350 г;
+                  </div>
+                </li>
+
+                <li class="product-tabs__info">
+                  <div class="product-tabs__subtitle">
+                    Калорийность (на 100г):
+                  </div>
+                  <div class="product-tabs__text">
+                    50 ккал;
+                  </div>
+                </li>
+
+                <li class="product-tabs__info">
+                  <div class="product-tabs__subtitle">
+                    Условия хранения:
+                  </div>
+                  <div class="product-tabs__text">
+                    температура от +3 до +8;
+                  </div>
+                </li>
+
+                <li class="product-tabs__info">
+                  <div class="product-tabs__subtitle">
+                    Другие названия:
+                  </div>
+                  <div class="product-tabs__text">
+                    Драконов фрукт, Глаз дракона;
+                  </div>
+                </li>
+
+                <li class="product-tabs__info">
+                  <div class="product-tabs__subtitle">
+                    Страна происхождения:
+                  </div>
+                  <div class="product-tabs__text">
+                    Вьетнам;
+                  </div>
+                </li>
+
+                <li class="product-tabs__info">
+                  <div class="product-tabs__subtitle">
+                    Срок хранения:
+                  </div>
+                  <div class="product-tabs__text">
+                    до 5 дней.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="product-tabs__content-item" id="tab-3">
+              <div class="product-tabs__content-wrapper">
+                <h3 class="product-tabs__content-title">
+                  мнения наших клиентов
+                </h3>
+
+                <div class="comments">
+                  <div class="comments__content">
+                    <div class="comments__content-top">
+                      <img class="comments__content-img" src="images/avatar/1.jpg" alt="#">
+                      <div class="comments__content-info">
+                        <p class="comments__content-name">
+                          Андрей
+                        </p>
+                        <p class="comments__content-date">
+                          10.06.2021
+                        </p>
+                      </div>
+                      <div class="comments__content-star star" data-rateyo-rating="4"></div>
+                    </div>
+                    <p class="comments__content-text">
+                      Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                    </p>
+                  </div>
+
+                  <div class="comments__content">
+                    <div class="comments__content-top">
+                      <img class="comments__content-img" src="images/avatar/1.jpg" alt="#">
+                      <div class="comments__content-info">
+                        <p class="comments__content-name">
+                          Екатерина Белая
+                        </p>
+                        <p class="comments__content-date">
+                          7.06.2021
+                        </p>
+                      </div>
+                      <div class="comments__content-star star" data-rateyo-rating="4"></div>
+                    </div>
+                    <p class="comments__content-text">
+                      Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет.
+                      Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать
+                      экзотические фрукты.
+                    </p>
+                  </div>
+                </div>
+
+                <form class="comments-form" action="#">
+                  <h3 class="comments-form__title">
+                    оставить отзыв
+                  </h3>
+                  <div class="comments-form__rating">
+                    <span class="comments-form__subtitle">
+                      Ваша оценка *
+                    </span>
+                    <div class="comments__form-star star" data-rateyo-rating="0"></div>
+                  </div>
+
+                  <div class="comments-form__inner">
+                    <div class="comments-form__messenger">
+                      <label class="comments-form__label" for="formMessenger">Ваш отзыв *</label>
+                      <textarea class="comments-form__textarea" name="messenger" id="formMessenger" required
+                        placeholder="Введите текст отзыва"></textarea>
+                    </div>
+
+                    <div class="comments-form__box">
+                      <div class="comments-form__item">
+                        <label class="comments-form__label" for="formName">Имя</label>
+                        <input class="comments-form__input" type="text" name="name" id="formName"
+                          placeholder="Введите ваше имя">
+                      </div>
+
+                      <div class="comments-form__item">
+                        <label class="comments-form__label" for="formEmail">Email *</label>
+                        <input class="comments-form__input" type="email" name="mail" id="formEmail" required
+                          placeholder="youremail@mail.com">
+                      </div>
+                    </div>
+                  </div>
+
+                  <label class="comments-form__check" for="formCheck">
+                    <input class="comments-form__checkbox" type="checkbox" name="check" id="formCheck">
+                    <span class="comments-form__checkbox-style"></span>
+                    <p class="comments-form__checkbox-text">
+                      Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+                    </p>
+                  </label>
+                  <button class="comments-form__btn btn-green" type="submit">
+                    Оставить отзыв
+                  </button>
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="related-product">
+      <div class="container">
+        <div class="related-product__wrapper">
+          <h3 class="related-product__title">
+            вас может заинтересовать
+          </h3>
+          <div class="related-product__btn">
+            <button class="related-product__btn-next" type="button"></button>
+            <button class="related-product__btn-prev" type="button"></button>
+          </div>
+        </div>
+
+        <div class="related-product__items">
+          <article class="product-item mix category-vegetables">
+            <div class="product-item__top">
+              <div class="product-item__span">
+                <span class="product-item__badge product-item__badge--hit">
+                  хит
+                </span>
+              </div>
+              <button class="product-item__heart" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-heart-product">
+                  </use>
+                </svg>
+              </button>
+            </div>
+            <div class="product-item__img-box">
+              <a class="product-item__img-link" href="#">
+                <img class="product-item__images" src="images/product/carrot.jpg" width="300" height="215"
+                  alt="морковь">
+              </a>
+            </div>
+
+            <div class="product-item__info">
+              <span class="product-item__status product-item__status-end">заканчивается</span>
+              <span class="product-item__rating">4.5</span>
+            </div>
+
+            <h3 class="product-item__title">
+              Морковь молодая с бабушкиной грядки, 1кг
+            </h3>
+            <div class="product-item__price">
+              <div class="product-item__price-all">
+                <p class="product-item__new-price">
+                  49
+                  <span class="product-item__rub">₽</span>
+                </p>
+              </div>
+
+              <button class="product-item__cart" type="button">
+                <svg width="16" height="16">
+                  <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-item mix category-beverages">
+            <div class="product-item__top">
+              <div class="product-item__span">
+                <span class="product-item__badge product-item__badge--sale">
+                  -30%
+                </span>
+              </div>
+              <button class="product-item__heart" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-heart-product">
+                  </use>
+                </svg>
+              </button>
+            </div>
+            <div class="product-item__img-box">
+              <a class="product-item__img-link" href="#">
+                <img class="product-item__images" src="images/product/juice.jpg" width="300" height="215"
+                  alt="напиток сокосодержащий апельсиновый">
+              </a>
+            </div>
+
+            <div class="product-item__info">
+              <span class="product-item__status product-item__status-end">заканчивается</span>
+              <span class="product-item__rating">4.5</span>
+            </div>
+
+            <h3 class="product-item__title">
+              Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+            </h3>
+            <div class="product-item__price">
+              <div class="product-item__price-all">
+                <p class="product-item__old-price">
+                  299
+                  <span class="product-item__rub">₽</span>
+                </p>
+                <p class="product-item__new-price">
+                  199
+                  <span class="product-item__rub">₽</span>
+                </p>
+              </div>
+              <button class="product-item__cart" type="button">
+                <svg width="16" height="16">
+                  <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-item mix category-grocery">
+            <div class="product-item__top">
+              <div class="product-item__span">
+                <span class="product-item__badge product-item__badge--new">
+                  новинка
+                </span>
+              </div>
+              <button class="product-item__heart" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-heart-product">
+                  </use>
+                </svg>
+              </button>
+            </div>
+            <div class="product-item__img-box">
+              <a class="product-item__img-link" href="#">
+                <img class="product-item__images" src="images/product/coffee.jpg" width="300" height="215" alt="кофе">
+              </a>
+            </div>
+
+            <div class="product-item__info">
+              <span class="product-item__status product-item__status-end">заканчивается</span>
+              <span class="product-item__rating">4.5</span>
+            </div>
+
+            <h3 class="product-item__title">
+              Кофе с коноплей органический Caffé Salomoni 250г
+            </h3>
+            <div class="product-item__price">
+              <div class="product-item__price-all">
+                <p class="product-item__new-price">
+                  877
+                  <span class="product-item__rub">₽</span>
+                </p>
+              </div>
+              <button class="product-item__cart" type="button">
+                <svg width="16" height="16">
+                  <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+
+          <article class="product-item mix category-grocery">
+            <div class="product-item__top">
+              <div class="product-item__span">
+                <span class="product-item__badge product-item__badge--new">
+                  новинка
+                </span>
+              </div>
+              <button class="product-item__heart" type="button">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-heart-product">
+                  </use>
+                </svg>
+              </button>
+            </div>
+            <div class="product-item__img-box">
+              <a class="product-item__img-link" href="#">
+                <img class="product-item__images" src="images/product/coffee.jpg" width="300" height="215" alt="кофе">
+              </a>
+            </div>
+
+            <div class="product-item__info">
+              <span class="product-item__status product-item__status-end">заканчивается</span>
+              <span class="product-item__rating">4.5</span>
+            </div>
+
+            <h3 class="product-item__title">
+              Кофе с коноплей органический Caffé Salomoni 250г
+            </h3>
+            <div class="product-item__price">
+              <div class="product-item__price-all">
+                <p class="product-item__new-price">
+                  877
+                  <span class="product-item__rub">₽</span>
+                </p>
+              </div>
+              <button class="product-item__cart" type="button">
+                <svg width="16" height="16">
+                  <use xlink:href="images/sprite.svg#icon-cart-product"></use>
+                </svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -359,6 +834,6 @@
 
 
   <script src="js/main.min.js"></script>
-  </body>
+</body>
 
-  </html>
+</html>
