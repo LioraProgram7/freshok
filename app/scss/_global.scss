@@ -295,6 +295,10 @@ body.overlay::before {
   .indent-bottom {
     padding-bottom: 55px;
   }
+
+   .breadcrumbs__list {
+     flex-wrap: wrap;
+   }
 }
 
 @media (max-width: $lg) {

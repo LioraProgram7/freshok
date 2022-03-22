@@ -1,5 +1,5 @@
 .product-item {
-  max-width: 302px;
+  max-width: 300px;
   width: 100%;
   height: 409px;
   border: 1px solid rgba(17, 17, 17, 0.2);
@@ -161,43 +161,41 @@
     color: $dark-500;
   }
 
-  &__price-all {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__old-price {
     text-decoration: line-through;
     color: $silver-600;
-    margin-left: 3px;
-}
-
-&__cart {
-  @extend %none-btn;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  border-radius: 3px;
-  background-color: $green-900;
-  transition: background-color 0.5s;
-
-  &:hover {
-    background-color: #4D800C;
   }
 
-  &:focus {
-    outline: solid 4px $green-200;
+  &__new-price {
+    margin-right: 3px;
+  }
+
+  &__cart {
+    @extend %none-btn;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
     border-radius: 3px;
-  }
+    background-color: $green-900;
+    transition: background-color 0.5s;
 
-  &:active {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+    &:hover {
+      background-color: #4D800C;
+    }
 
-  svg use {
-    fill: $white;
+    &:focus {
+      outline: solid 4px $green-200;
+      border-radius: 3px;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    svg use {
+      fill: $white;
+    }
   }
-}
 }
 
 @media (max-width: $xl) {

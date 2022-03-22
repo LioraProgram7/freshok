@@ -12,6 +12,7 @@
   }
 }
 
+// как сделать стилизацию при нажатии на картинку ( открытии галереи) я так и не нашла(( сама ипыталась сделать но не вышло(
 .product-slide {
   max-width: 630px;
   width: 100%;
@@ -20,7 +21,7 @@
 
   &__img {
     display: inline-block;
-    padding: 69px 105px;
+    padding: 66px 105px;
     object-fit: cover;
   }
 }
@@ -28,6 +29,10 @@
 .product-content {
   max-width: 630px;
   width: 100%;
+
+  &__title--adaptive {
+    display: none;
+  }
 
   &__title {
     @extend %ruda-600;
@@ -59,6 +64,10 @@
     align-items: center;
   }
 
+  &__star {
+    margin-right: 100px;
+  }
+
   &__code {
     line-height: 1.2;
     color: $silver-600;
@@ -67,11 +76,6 @@
     padding: 4px 5px;
     margin-right: 8px;
   }
-
-  // &__star {
-  //   max-width: 410px;
-  //   width: 100%;
-  // }
 
   &__status {
     @extend %opensans-600;
@@ -116,7 +120,6 @@
     position: relative;
     cursor: pointer;
     margin-left: -37px;
-    // margin-right: 156px;
     transition: background-color 0.5s;
 
     &::after {
@@ -141,6 +144,10 @@
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
       color: rgba(255, 255, 255, 0.5);
     }
+  }
+
+  &__btn-adaptive {
+    display: none;
   }
 
   &__form {
@@ -192,10 +199,11 @@
     line-height: 1.6;
     color: $dark-500;
     max-width: 470px;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
   }
 
   &__more {
+    display: block;
     line-height: 1.2;
     color: $green-900;
 
@@ -293,7 +301,7 @@
 
 .product-tabs {
   border-top: 1px solid $silver-600;
-  padding-top: 14px;
+  padding-top: 19px;
 
   &__container {
     max-width: 804px;
@@ -373,8 +381,6 @@
   }
 
   &__content-wrapper {
-    // max-width: 688px;
-    // width: 100%;
     margin-left: 42px;
   }
 
@@ -393,11 +399,6 @@
 .related-product {
   padding-bottom: 46px;
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__title {
     @extend %ruda-600;
     font-size: 30px;
@@ -408,57 +409,14 @@
     margin-bottom: 60px;
   }
 
-  &__btn {
-    position: relative;
-    transform: translateY(-11px);
+  &__container {
+    max-width: 1323px;
+    width: 100%;
   }
 
-  &__btn-next {
-    @extend %none-btn;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #C1C1C1;
-    border-radius: 6px;
-    margin-right: 25px;
+  // чутка не помакету выходит отсуп. Пробывала в контейнер поместить product-items и ему задать больше ширину, но не реагирует. Пыталась ширину самого .slick-slide поменять, но перебивает автоматическая настройка слайдера в html. пробывала минусовыми марджинами тоже не то..
 
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../images/icons/arrow-next.svg');
-      width: 18px;
-      height: 32px;
-      top: 14px;
-      left: 20px;
-
-    }
-  }
-
-  &__btn-prev {
-    @extend %none-btn;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border: 1px solid #C1C1C1;
-    border-radius: 6px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url('../images/icons/arrow-prev.svg');
-      width: 18px;
-      height: 32px;
-      top: 14px;
-      right: 23px;
-    }
-  }
-
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-  }
-
+  // не выходит задать отступ product-item, задавала обвертку product-item, не работает
   .product-item {
     &__info {
       display: flex;
@@ -509,6 +467,17 @@
     &__old-price {
       margin-left: 0;
     }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: -104px;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .slick-next-three {
+    right: 91px;
   }
 }
 
@@ -562,6 +531,7 @@
 
 .comments-form {
   padding: 48px 0 62px;
+  position: relative;
 
   &__title {
     @extend %ruda-600;
@@ -684,5 +654,308 @@
 
   &__btn {
     max-width: 194px;
+  }
+}
+
+.slick-arrow {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 6px;
+  @extend %none-btn;
+
+  &:hover svg path {
+    fill: $green-900;
+  }
+
+  &:hover svg rect {
+    fill: $green-200;
+  }
+
+  &:focus {
+    outline: 3px solid rgba(99, 166, 14, 0.5);
+    border-radius: 6px;
+  }
+
+  &:active svg path {
+    fill: $green-900;
+  }
+
+  &:active svg rect {
+    fill: #F3F3F2;
+  }
+}
+
+.slick-prev-two,
+.slick-next-two {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.slick-prev-two {
+  right: 0;
+  margin-right: 22px;
+}
+
+.slick-next-two {
+  left: 0;
+  margin-left: 22px;
+}
+
+.slick-disabled svg path {
+  fill: #C1C1C1;
+}
+
+.slick-disabled:hover svg path {
+  fill: #C1C1C1;
+}
+
+.slick-disabled:hover svg rect {
+  fill: rgba(255, 255, 255);
+}
+
+
+
+@media (max-width: $xxl) {
+  .related-product__items {
+    margin-left: 45px;
+  }
+}
+
+
+@media (max-width: $xl) {
+  .product-page {
+    padding: 30px 0 22px;
+  }
+
+  .product-one {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__slide {
+      margin-bottom: 27px;
+      margin-right: 0;
+    }
+  }
+
+  .product-content {
+    &__title {
+      display: none;
+    }
+
+    &__title--adaptive {
+      display: inline-block;
+      padding-top: 0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__box {
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    &__price {
+      margin-bottom: 30px;
+    }
+
+    &__subtext {
+      margin-bottom: 16px;
+    }
+
+    &__more {
+      margin-bottom: 30px;
+    }
+  }
+
+  .related-product__items {
+    margin-left: 25px;
+  }
+}
+
+
+@media (max-width: $lg) {
+  .product-tabs {
+    padding-top: 12px;
+
+    &__top {
+      margin-bottom: 30px;
+    }
+
+    &__top-item--active::before {
+      top: -14px;
+    }
+
+    &__content-description,
+    &__characteristic,
+    &__content-wrapper {
+      margin: 0 auto;
+    }
+
+    &__content-title {
+      margin-bottom: 30px;
+    }
+  }
+
+  .related-product {
+    padding-bottom: 42px;
+
+    .slick-dots {
+      transform: translateY(8px);
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__items {
+      margin-left: 60px;
+    }
+  }
+
+  .comments {
+    &__content-top {
+      margin-bottom: 18px;
+    }
+
+    &__content:not(:last-child) {
+      padding-bottom: 18px;
+    }
+  }
+
+  .comments-form {
+    padding: 6px 0 32px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media (max-width: $md) {
+  .product-slide {
+    max-width: 345px;
+    align-self: flex-start;
+
+    &__img {
+      padding: 20px 38px;
+    }
+  }
+
+  .product-content {
+    &__title--adaptive {
+      font-size: 26px;
+      text-align: left;
+    }
+
+    &__status {
+      margin-left: revert;
+      margin-right: revert;
+    }
+
+    &__code,
+    &__star,
+    &__status {
+      margin-bottom: 18px;
+    }
+  }
+
+  .product-tabs {
+    &__top-item {
+      font-size: 14px;
+    }
+
+    &__info {
+      flex-wrap: wrap;
+    }
+  }
+
+  .related-product {
+    &__title {
+      font-size: 24px;
+    }
+
+    .product-item__status {
+      font-size: 8px;
+    }
+
+    .product-item__rating {
+      font-size: 10px;
+    }
+
+    .product-item__rating::before {
+      width: 12px;
+      height: 12px;
+      background-size: cover;
+    }
+
+    .product-item__info {
+      padding: 0px 12px 6px 11px;
+    }
+
+    .product-item__rating::before {
+      left: 17px;
+    }
+
+    .product-item__price {
+      padding: 36px 13px 10px 11px;
+    }
+
+    &__items {
+      margin-left: 0;
+    }
+  }
+
+  .comments-form {
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    &__messenger {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-right: 0;
+      margin-bottom: 18px;
+    }
+
+    &__textarea {
+      width: 100%;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    // input с помощью position: absolute растягивается, но вылазит за контейнер. контейнер не помогае, марджины тоже. Надпись с лева думала с помощью display: flex; flex-direction: column; на верх закинуть, но вообще пропадает. Вобщем не вышло растянуть на всю ширину инпут
+    // &__input {
+    //   position: absolute;
+    // max-width: 100%;
+    // }
+  }
+}
+
+@media (max-width: $sm) {
+  .product-content {
+    &__btn {
+      display: none;
+    }
+
+    &__btn-adaptive {
+      display: inline-block;
+      padding: 14px 25px;
+    }
+  }
+
+  .product-tabs__top {
+    justify-content: space-between;
   }
 }
