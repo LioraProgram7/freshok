@@ -152,8 +152,6 @@
   &__text {
     @extend %filter-text;
   }
-
-
 }
 
 .filter-brand {
@@ -195,43 +193,33 @@
   }
 }
 
-.irs--flat {
-  height: 36px;
-}
-
-.irs--flat .irs-bar {
-  top: 27px;
+.irs--round .irs-bar {
+  top: 30px;
   height: 2px;
   background-color: $green-900;
 }
 
-.irs--flat .irs-line {
-  top: 27px;
-  height: 2px;
-  background-color: #C4C4C4;
-  border-radius: 4px;
-}
-
-.irs--flat .irs-handle {
-  top: 19px;
+.irs--round .irs-handle {
+  top: 21px;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
+  border: none;
   background-color: $green-900;
+  box-shadow: none;
 }
 
-.irs--flat .irs-handle>i:first-child {
-  display: none;
+.irs--round .irs-line {
+  top: 30px;
+  height: 2px;
+  background-color: #C4C4C4;
+  border: none;
 }
 
-.irs--flat .irs-min,
-.irs--flat .irs-max {
-  display: none;
-}
-
-.irs--flat .irs-from,
-.irs--flat .irs-to,
-.irs--flat .irs-single {
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single, 
+.irs--round .irs-min,
+.irs--round .irs-max {
   display: none;
 }
 
