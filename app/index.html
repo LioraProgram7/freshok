@@ -60,10 +60,64 @@
           <a class="logo-short" href="#">
             <img class="logo-short" src="images/logo-short.svg" alt="логотип" width="37" height="40">
           </a>
-          <button class="header-bottom__btn" type="button">Каталог продуктов</button>
+
+          <div class="header-bottom__wrapper">
+            <button class="header-bottom__btn" type="button">
+              Каталог продуктов
+            </button>
+            <div class="header-bottom__filter">
+              <a class="header-bottom__filter-btn" href="#">
+                Овощи и фрукты
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Бакалея
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Молочные продукты
+              </a>
+
+              <a class="header-bottom__filter-btn header-bottom__filter-btn--active" href="#">
+                Хлеб
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Мясо
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Колбаса
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Рыба
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Алкоголь
+              </a>
+
+
+              <a class="header-bottom__filter-btn" href="#">
+                Напитки
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Торты
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Мясо
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Чай, кофе
+              </a>
+            </div>
+          </div>
 
           <form class="header-bottom__search" action="#">
-
             <div class="header-bottom__search-block">
               <a class="header-bottom__search-vector" href="#">
                 <svg>
@@ -73,7 +127,9 @@
               <input class="header-bottom__search-input" name="search" type="search" aria-label="Найти в магазине"
                 required placeholder="Найти в магазине ...">
             </div>
-            <button class="header-bottom__search-btn btn-black" type="button">поиск</button>
+            <button class="header-bottom__search-btn btn-black" type="button">
+              поиск
+            </button>
           </form>
 
           <ul class="header-bottom__user-nav">
@@ -102,7 +158,7 @@
               </a>
             </li>
 
-            <li class="header-bottom__user-item">
+            <li class="header-bottom__user-item header-bottom__user-item--cart">
               <a class="header-bottom__user-link header-bottom__user-link--cart" href="#" aria-label="корзина">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -113,7 +169,78 @@
           </ul>
         </div>
       </div>
+
+      <!-- для корзины. отдельно файл scss - cart-menu -->
+
+      <!-- при клике на корзинку выезжает сама корзина но весь остальной контент дергается). Как это исправить? -->
+      <div class="cart-menu">
+        <div class="cart-menu__top">
+          <h3 class="cart-menu__top-title">
+            Корзина
+          </h3>
+          <button class="cart-menu__top-btn" type="button">
+            очистить корзину
+          </button>
+          <button class="cart-menu__btn btn__close" type="button"></button>
+        </div>
+
+        <div class="cart-menu__products">
+
+          <article class="cart-menu__products-item">
+            <div class="cart-menu__products-photo">
+              <img class="cart-menu__products-img" src="images/product/pineapple.jpg" alt="ананас">
+            </div>
+            <div class="cart-menu__products-box">
+              <div class="cart-menu__products-top">
+                <p class="cart-menu__products-text">
+                  Ананас, 1 кг
+                </p>
+                <span class="cart-menu__start-price price-style">999₽</span>
+              </div>
+              <div class="cart-menu__products-inner">
+                <button class="cart-menu__products-btn"></button>
+                <form class="cart-menu__products-price" action="#">
+                  <input class="cart-menu__products-num product-content__num" type="number" name="number" value="2"
+                    min="1">
+                  <span class="cart-menu__products-totalprise price-style">1998₽</span>
+                </form>
+              </div>
+            </div>
+          </article>
+
+          <article class="cart-menu__products-item">
+            <div class="cart-menu__products-photo">
+              <img class="cart-menu__products-img" src="images/product/dragon.jpg" alt="питахая">
+            </div>
+            <div class="cart-menu__products-box">
+              <div class="cart-menu__products-top">
+                <p class="cart-menu__products-text">
+                  Питахайя красная с белой мякотью, 1шт
+                </p>
+                <span class="cart-menu__start-price price-style">1019₽</span>
+              </div>
+              <div class="cart-menu__products-inner">
+                <button class="cart-menu__products-btn"></button>
+                <form class="cart-menu__products-price" action="">
+                  <input class="cart-menu__products-num product-content__num" type="number" name="number" value="2"
+                    min="1">
+                  <span class="cart-menu__products-totalprise price-style">2038₽</span>
+                </form>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cart-menu__total">
+          <p class="cart-menu__total-text">
+            Товаров на сумму
+          </p>
+          <span class="cart-menu__total-price">2038₽</span>
+        </div>
+        <button class="cart-menu__checkout">Оформить заказ</button>
+      </div>
     </div>
+
 
     <!-- для адаптива. отдельно файл scss - mob-menu -->
     <nav class="mob-menu">
@@ -121,7 +248,7 @@
         <a class="logo-green" href="#">
           <img class="logo-green__img" src="images/logo-green.svg" alt="логотип" width="190" height="60">
         </a>
-        <button class="mob-menu__btn btn__close "></button>
+        <button class="mob-menu__btn btn__close" type="button"></button>
       </div>
 
 
@@ -236,7 +363,6 @@
   <main class="main">
     <section class="slider-top">
       <h2 class="sr-only">Фрешок Онлайн-Маркет Скидки</h2>
-      <!-- когда уменьшаю экран пропадают фоновые картинки, просто белый фон вместо них, не пойму в чем проблема, раньше такого не было. Обновляю страницу они опоявляются, начинаю опять уменьшать экран и они пропадают и так по кругу -->
       <ul class="slider-top__inner">
         <li class="slider-top__item">
           <div class="slider-top__item-img" style="background-image: url('images/slider/top-slider1.jpg');">
@@ -395,6 +521,10 @@
               <h3 class="product-item__title">
                 Ананас, 1кг
               </h3>
+              <form class="product-item__counter" action="">
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__old-price">
@@ -406,6 +536,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
+
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -439,6 +570,10 @@
               <h3 class="product-item__title">
                 Лимон, 1кг
               </h3>
+              <form class="product-item__counter" action="">
+                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                    min="1">
+                </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -446,6 +581,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
+                
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -483,7 +619,11 @@
 
               <h3 class="product-item__title">
                 Питахайя красная с белой мякотью, 1шт
-              </h3>
+              </h3> 
+              <form class="product-item__counter" action="">
+                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                    min="1">
+                </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -518,6 +658,10 @@
               <h3 class="product-item__title">
                 Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
               </h3>
+               <form class="product-item__counter" action="">
+                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                    min="1">
+                </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -561,7 +705,11 @@
 
               <h3 class="product-item__title">
                 Морковь молодая с бабушкиной грядки, 1кг
-              </h3>
+              </h3> 
+               <form class="product-item__counter" action="">
+                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                    min="1">
+                </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -569,7 +717,6 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
-
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -607,6 +754,10 @@
               <h3 class="product-item__title">
                 Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
               </h3>
+               <form class="product-item__counter" action="">
+                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                    min="1">
+                </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__old-price">
@@ -618,6 +769,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
+               
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -655,6 +807,10 @@
               <h3 class="product-item__title">
                 Кофе с коноплей органический Caffé Salomoni 250г
               </h3>
+              <form class="product-item__counter" action="">
+                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                    min="1">
+                </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -662,6 +818,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
+                
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -669,7 +826,6 @@
                 </button>
               </div>
             </article>
-
             <article class="product-item mix category-vegetables">
               <div class="product-item__top">
                 <div class="product-item__span">
@@ -699,6 +855,10 @@
               <h3 class="product-item__title">
                 Перец оранжевый, 1кг
               </h3>
+              <form class="product-item__counter" action="">
+                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                    min="1">
+                </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -706,7 +866,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
-
+                
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -1350,13 +1510,13 @@
 
     <div class="footer-bottom">
       <div class="container">
-         <div class="footer-bottom__wrap">
-        <p class="footer-bottom__text">© 2021 фрешок</p>
-        <div class="footer-bottom__img ">
-          <img class="footer-bottom__img--viza" src="images/icons/icon-visa.svg" width="93" height="29" alt="viza">
-          <img class="footer-bottom__img--mc" src="images/icons/icon-mc.svg" width="49" height="29" alt="mastercard">
+        <div class="footer-bottom__wrap">
+          <p class="footer-bottom__text">© 2021 фрешок</p>
+          <div class="footer-bottom__img ">
+            <img class="footer-bottom__img--viza" src="images/icons/icon-visa.svg" width="93" height="29" alt="viza">
+            <img class="footer-bottom__img--mc" src="images/icons/icon-mc.svg" width="49" height="29" alt="mastercard">
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </footer>

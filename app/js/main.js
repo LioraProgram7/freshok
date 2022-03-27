@@ -83,10 +83,9 @@ $(function () {
   });
 
 
-  // для категорий чтобы скрыть 
+  // для фильтров
   $('.filter-item__btn').on('click', function () {
     $('.filter-categories__list').slideToggle();
-    // пыталась сделать чтобы стрелка при открытии поворачивалась но не работает
     $(this).toggleClass('transform');
   });
 
@@ -103,6 +102,24 @@ $(function () {
   });
 
 
+  // кнопка меню 
+  $('.header-bottom__filter').hide();
+  $('.header-bottom__btn').on('click', function () {
+    $('.header-bottom__filter').slideToggle();
+    $(this).toggleClass('transform');
+  });
+
+
+// Корзина с товарами 
+     $('.header-bottom__user-item--cart').on('click', function () {
+       $('.header-bottom__user-item--cart, .cart-menu').toggleClass('active');
+       $('body').toggleClass('overlay');
+     });
+
+     $('.cart-menu__btn').on('click', function () {
+       $('.cart-menu').removeClass('active');
+       $('body').toggleClass('overlay');
+     });
 
   // кнопки переключения вида страниц каталога товаров
   $('.catalog-page__filter-btn').on('click', function () {
@@ -209,6 +226,7 @@ $(function () {
   });
 
 
+  // форма поиска
   $('.header-bottom__user-item--search').on('click', function () {
     $('.header-bottom__user-item--search, .header-bottom__search').toggleClass('active');
   });

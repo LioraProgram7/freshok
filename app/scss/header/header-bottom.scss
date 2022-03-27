@@ -31,9 +31,23 @@
       background-color: #E0EDCF;
       border-radius: 6px 6px 0px 0px;
     }
+// Как сделать чтобы в открытом состоянии цвет кнопки был другим? (17)
+    // &:active {
+    //   background-color: #E0EDCF;
+    //   border-radius: 6px 6px 0px 0px;
+    // }
 
     &:focus {
       outline: 3px solid #E0EDCF;
+    }
+
+    // &:enabled {
+    //    background-color: #E0EDCF;
+    //    border-radius: 6px 6px 0px 0px;
+    // }
+
+    &.transform::after {
+      transform: rotate(180deg);
     }
   }
 
@@ -60,6 +74,102 @@
     right: 18px;
     background-size: auto;
   }
+
+  //   &__filter {
+  //     background-color: $white;
+  //     border: 1px solid #EBEBEB;
+  //     box-sizing: border-box;
+  //     border-radius: 0px 0px 6px 6px;
+  //     max-width: 240px;
+  //     width: 100%;
+  //     transform: translate(0px, 10px);
+  //     z-index: 5;
+  //   }
+
+  //   &__filter-item {
+  //     padding: 15px 24px;
+  //     cursor: pointer;
+
+  //     &:not(:last-child) {
+  //       border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+  //     }
+  //   }
+
+  //   &__filter-btn {
+
+  //     font-size: 16px;
+  //     line-height: 1.2;
+  //     letter-spacing: 0.03em;
+  //     color: #000000;
+  //     cursor: pointer;
+  //   }
+  //  &__filter-btn--active {
+  //     color: $green-900;
+  //     position: relative;
+
+  //     &::after {
+  //       content:'';
+  //       position: absolute;
+  //       height: 50px;
+  //       width: 3px;
+  //       top: -13px;
+  //       left: -25px;
+  //       background-color: $green-900;
+  //     }
+  //   }
+
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 240px;
+    background-color: $white;
+    border: 1px solid #EBEBEB;
+    border-radius: 0px 0px 6px 6px;
+    box-sizing: border-box;
+    overflow: auto;
+    z-index: 1;
+    transform: translate(-7px, -5px);
+  } 
+
+  &__filter-btn {
+    padding: 15px 24px;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+
+  &__filter-btn--active {
+    color: $green-900;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 50px;
+      width: 3px;
+      top: 0;
+      left: 0;
+      background-color: $green-900;
+    }
+  }
+
 
   &__search {
     display: flex;
