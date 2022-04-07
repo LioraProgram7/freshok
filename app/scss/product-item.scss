@@ -141,7 +141,6 @@
     line-height: 1.4;
     font-size: 14px;
     padding: 0 15px;
-    // было 60
     height: 60px;
     margin-bottom: -6px;
     text-align: left;
@@ -232,6 +231,10 @@
 
   .product-content__num {
     transform: translate(60px, 30px);
+  }
+
+  .product-content__num {
+    margin-right: 50px;
   }
 }
 

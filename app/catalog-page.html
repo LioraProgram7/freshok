@@ -60,10 +60,64 @@
           <a class="logo-short" href="#">
             <img class="logo-short" src="images/logo-short.svg" alt="логотип" width="37" height="40">
           </a>
-          <button class="header-bottom__btn" type="button">Каталог продуктов</button>
+
+          <div class="header-bottom__wrapper">
+            <button class="header-bottom__btn" type="button">
+              Каталог продуктов
+            </button>
+            <div class="header-bottom__filter">
+              <a class="header-bottom__filter-btn" href="#">
+                Овощи и фрукты
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Бакалея
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Молочные продукты
+              </a>
+
+              <a class="header-bottom__filter-btn header-bottom__filter-btn--active" href="#">
+                Хлеб
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Мясо
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Колбаса
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Рыба
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Алкоголь
+              </a>
+
+
+              <a class="header-bottom__filter-btn" href="#">
+                Напитки
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Торты
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Мясо
+              </a>
+
+              <a class="header-bottom__filter-btn" href="#">
+                Чай, кофе
+              </a>
+            </div>
+          </div>
 
           <form class="header-bottom__search" action="#">
-
             <div class="header-bottom__search-block">
               <a class="header-bottom__search-vector" href="#">
                 <svg>
@@ -73,7 +127,9 @@
               <input class="header-bottom__search-input" name="search" type="search" aria-label="Найти в магазине"
                 required placeholder="Найти в магазине ...">
             </div>
-            <button class="header-bottom__search-btn btn-black" type="button">поиск</button>
+            <button class="header-bottom__search-btn btn-black" type="button">
+              поиск
+            </button>
           </form>
 
           <ul class="header-bottom__user-nav">
@@ -102,7 +158,7 @@
               </a>
             </li>
 
-            <li class="header-bottom__user-item">
+            <li class="header-bottom__user-item header-bottom__user-item--cart">
               <a class="header-bottom__user-link header-bottom__user-link--cart" href="#" aria-label="корзина">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -112,6 +168,75 @@
             </li>
           </ul>
         </div>
+      </div>
+
+      <!-- для корзины. отдельно файл scss - cart-menu -->
+
+      <div class="cart-menu">
+        <div class="cart-menu__top">
+          <h3 class="cart-menu__top-title">
+            Корзина
+          </h3>
+          <button class="cart-menu__top-btn" type="button">
+            очистить корзину
+          </button>
+          <button class="cart-menu__btn btn__close" type="button"></button>
+        </div>
+
+        <div class="cart-menu__products">
+
+          <article class="cart-menu__products-item">
+            <div class="cart-menu__products-photo">
+              <img class="cart-menu__products-img" src="images/product/pineapple.jpg" alt="ананас">
+            </div>
+            <div class="cart-menu__products-box">
+              <div class="cart-menu__products-top">
+                <p class="cart-menu__products-text">
+                  Ананас, 1 кг
+                </p>
+                <span class="cart-menu__start-price price-style">999₽</span>
+              </div>
+              <div class="cart-menu__products-inner">
+                <button class="cart-menu__products-btn"></button>
+                <form class="cart-menu__products-price" action="#">
+                  <input class="cart-menu__products-num product-content__num" type="number" name="number" value="2"
+                    min="1">
+                  <span class="cart-menu__products-totalprise price-style">1998₽</span>
+                </form>
+              </div>
+            </div>
+          </article>
+
+          <article class="cart-menu__products-item">
+            <div class="cart-menu__products-photo">
+              <img class="cart-menu__products-img" src="images/product/dragon.jpg" alt="питахая">
+            </div>
+            <div class="cart-menu__products-box">
+              <div class="cart-menu__products-top">
+                <p class="cart-menu__products-text">
+                  Питахайя красная с белой мякотью, 1шт
+                </p>
+                <span class="cart-menu__start-price price-style">1019₽</span>
+              </div>
+              <div class="cart-menu__products-inner">
+                <button class="cart-menu__products-btn"></button>
+                <form class="cart-menu__products-price" action="">
+                  <input class="cart-menu__products-num product-content__num" type="number" name="number" value="2"
+                    min="1">
+                  <span class="cart-menu__products-totalprise price-style">2038₽</span>
+                </form>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cart-menu__total">
+          <p class="cart-menu__total-text">
+            Товаров на сумму
+          </p>
+          <span class="cart-menu__total-price">2038₽</span>
+        </div>
+        <button class="cart-menu__checkout">Оформить заказ</button>
       </div>
     </div>
 
@@ -260,7 +385,6 @@
         </h2>
 
         <div class="catalog-page__inner">
-          <!-- анимация категорий хромает, при нажатии на кнопку (стрелочку) чтобы свернуть или развернуть определенную категорию, срабатывает и на другие категории, искала в инете как исправить но не нашла -->
           <div class="catalog-page__filter filter">
             <button class="catalog-page__btn btn__close" type="button"></button>
             <div class="filter-item filter-categories">
@@ -268,7 +392,7 @@
                 <h3 class="filter-item__title">
                   Категории
                 </h3>
-                <button class="filter-item__btn" type="button"></button>
+                <button class="filter-item__btn filter-item__btn--categories" type="button"></button>
               </div>
               <ul class="filter-categories__list">
                 <li class="filter-categories__item">
@@ -429,7 +553,6 @@
                 </h3>
                 <button class="filter-item__btn filter-item__btn--click3" type="button"></button>
               </div>
-              <!-- не вышло сделать так чтобы цену можно было вписать и ползунок подстроился -->
               <form class="filter-price__form" action="#">
                 <label class="filter-price__label" for="price">
                   <span class="filter-price__box">от
@@ -441,7 +564,6 @@
                 </label>
                 <input class="filter-price__input" type="text" name="price" id="price">
               </form>
-
             </div>
           </div>
 

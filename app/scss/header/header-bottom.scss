@@ -31,7 +31,8 @@
       background-color: #E0EDCF;
       border-radius: 6px 6px 0px 0px;
     }
-// Как сделать чтобы в открытом состоянии цвет кнопки был другим? (17)
+
+    // Как сделать чтобы в открытом состоянии цвет кнопки был другим?  И углы были без бордера?
     // &:active {
     //   background-color: #E0EDCF;
     //   border-radius: 6px 6px 0px 0px;
@@ -75,49 +76,6 @@
     background-size: auto;
   }
 
-  //   &__filter {
-  //     background-color: $white;
-  //     border: 1px solid #EBEBEB;
-  //     box-sizing: border-box;
-  //     border-radius: 0px 0px 6px 6px;
-  //     max-width: 240px;
-  //     width: 100%;
-  //     transform: translate(0px, 10px);
-  //     z-index: 5;
-  //   }
-
-  //   &__filter-item {
-  //     padding: 15px 24px;
-  //     cursor: pointer;
-
-  //     &:not(:last-child) {
-  //       border-bottom: 1px solid rgba(193, 193, 193, 0.3);
-  //     }
-  //   }
-
-  //   &__filter-btn {
-
-  //     font-size: 16px;
-  //     line-height: 1.2;
-  //     letter-spacing: 0.03em;
-  //     color: #000000;
-  //     cursor: pointer;
-  //   }
-  //  &__filter-btn--active {
-  //     color: $green-900;
-  //     position: relative;
-
-  //     &::after {
-  //       content:'';
-  //       position: absolute;
-  //       height: 50px;
-  //       width: 3px;
-  //       top: -13px;
-  //       left: -25px;
-  //       background-color: $green-900;
-  //     }
-  //   }
-
   &__wrapper {
     position: relative;
     display: inline-block;
@@ -135,7 +93,7 @@
     overflow: auto;
     z-index: 1;
     transform: translate(-7px, -5px);
-  } 
+  }
 
   &__filter-btn {
     padding: 15px 24px;
@@ -169,7 +127,6 @@
       background-color: $green-900;
     }
   }
-
 
   &__search {
     display: flex;
@@ -325,6 +282,10 @@
 
     &__search-input {
       min-width: 218px;
+    }
+
+    &__filter {
+      transform: translate(3px, -5px);
     }
   }
 }

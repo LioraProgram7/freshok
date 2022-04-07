@@ -172,7 +172,7 @@
 
       <!-- для корзины. отдельно файл scss - cart-menu -->
 
-      <!-- при клике на корзинку выезжает сама корзина но весь остальной контент дергается). Как это исправить? -->
+      <!-- при клике на корзинку выезжает сама корзина но весь остальной контент дергается. Как это исправить? -->
       <div class="cart-menu">
         <div class="cart-menu__top">
           <h3 class="cart-menu__top-title">
@@ -360,7 +360,7 @@
   </header>
 
 
-  <main class="main">
+  <main class="main" id="index">
     <section class="slider-top">
       <h2 class="sr-only">Фрешок Онлайн-Маркет Скидки</h2>
       <ul class="slider-top__inner">
@@ -454,7 +454,8 @@
     <section class="product indent">
       <div class="container">
         <h2 class="title product__title">Топовые товары</h2>
-
+        
+<!-- не понимаю почему при переключении дергаються товары, может это только у меня глюк -->
         <div data-ref="container-1">
           <ul class="product__list mixer">
             <li class="mixer__item">
@@ -571,9 +572,9 @@
                 Лимон, 1кг
               </h3>
               <form class="product-item__counter" action="">
-                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
-                    min="1">
-                </form>
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -581,7 +582,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
-                
+
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -619,11 +620,11 @@
 
               <h3 class="product-item__title">
                 Питахайя красная с белой мякотью, 1шт
-              </h3> 
+              </h3>
               <form class="product-item__counter" action="">
-                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
-                    min="1">
-                </form>
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -658,10 +659,10 @@
               <h3 class="product-item__title">
                 Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
               </h3>
-               <form class="product-item__counter" action="">
-                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
-                    min="1">
-                </form>
+              <form class="product-item__counter" action="">
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -705,11 +706,11 @@
 
               <h3 class="product-item__title">
                 Морковь молодая с бабушкиной грядки, 1кг
-              </h3> 
-               <form class="product-item__counter" action="">
-                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
-                    min="1">
-                </form>
+              </h3>
+              <form class="product-item__counter" action="">
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -754,10 +755,10 @@
               <h3 class="product-item__title">
                 Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
               </h3>
-               <form class="product-item__counter" action="">
-                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
-                    min="1">
-                </form>
+              <form class="product-item__counter" action="">
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__old-price">
@@ -769,7 +770,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
-               
+
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -808,9 +809,9 @@
                 Кофе с коноплей органический Caffé Salomoni 250г
               </h3>
               <form class="product-item__counter" action="">
-                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
-                    min="1">
-                </form>
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -818,7 +819,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
-                
+
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -856,9 +857,9 @@
                 Перец оранжевый, 1кг
               </h3>
               <form class="product-item__counter" action="">
-                  <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
-                    min="1">
-                </form>
+                <input class="product-item__counter-num  product-content__num" type="number" name="number" value="1"
+                  min="1">
+              </form>
               <div class="product-item__price">
                 <div class="product-item__price-all">
                   <p class="product-item__new-price">
@@ -866,7 +867,7 @@
                     <span class="product-item__rub">₽</span>
                   </p>
                 </div>
-                
+
                 <button class="product-item__cart" type="button">
                   <svg width="16" height="16">
                     <use xlink:href="images/sprite.svg#icon-cart-product"></use>
@@ -1520,11 +1521,6 @@
       </div>
     </div>
   </footer>
-
-
-
-
-
 
 
 

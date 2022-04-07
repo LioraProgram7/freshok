@@ -41,8 +41,6 @@
     }
   }
 
-
-
   &__btn {
     @extend %none-btn;
     position: relative;
@@ -129,6 +127,7 @@
     }
   }
 
+  // не понимаю почему отмечается только первый инпут а все остальные нет, изначально все работало
   &__input {
     @extend %checkbox-hidden;
 
@@ -522,6 +521,11 @@
     }
   }
 }
+
+
+
+
+
 
 @media (max-width: $lg) {
   .catalog-page {

@@ -12,7 +12,6 @@
   }
 }
 
-// как сделать стилизацию при нажатии на картинку ( открытии галереи) я так и не нашла(( сама ипыталась сделать но не вышло(
 .product-slide {
   max-width: 630px;
   width: 100%;
@@ -29,6 +28,7 @@
 .product-content {
   max-width: 630px;
   width: 100%;
+  line-height: 1.2;
 
   &__title--adaptive {
     display: none;
@@ -37,11 +37,11 @@
   &__title {
     @extend %ruda-600;
     font-size: 32px;
-    line-height: 1.2;
     color: $dark-900;
     margin-bottom: 18px;
     padding-top: 20px;
     letter-spacing: 0.03em;
+    line-height: 1.2;
   }
 
   &__badge {
@@ -69,7 +69,6 @@
   }
 
   &__code {
-    line-height: 1.2;
     color: $silver-600;
     background-color: $silver-100;
     border-radius: 3px;
@@ -119,7 +118,6 @@
     padding-left: 50px;
     position: relative;
     cursor: pointer;
-    margin-left: -37px;
     transition: background-color 0.5s;
 
     &::after {
@@ -187,7 +185,6 @@
   &__subtitle {
     @extend %ruda-600;
     font-size: 18px;
-    line-height: 1.2;
     color: $dark-900;
     letter-spacing: 0.03em;
     padding-bottom: 19px;
@@ -204,7 +201,6 @@
 
   &__more {
     display: block;
-    line-height: 1.2;
     color: $green-900;
 
     &:hover {
@@ -222,6 +218,10 @@
   }
 }
 
+.jq-number {
+  padding: 0;
+}
+
 .jq-number__field input {
   text-align: center;
   width: 100%;
@@ -230,6 +230,10 @@
   @extend %opensans-400;
   font-size: 20px;
   color: $dark-500;
+
+  &:focus {
+    outline: 4px solid #E0EDCF;
+  }
 }
 
 .jq-number__field {
@@ -239,16 +243,13 @@
   background-color: rgba(99, 166, 14, 0.1);
   line-height: 1.0;
 
-  &:focus {
-    outline: 4px solid #E0EDCF;
-  }
 }
 
 .jq-number__spin {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 35px;
+  right: 0;
   width: 44px;
   height: 44px;
   border-radius: 0px 3px 3px 0px;
@@ -293,7 +294,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 20px;
+  left: 21px;
   width: 2px;
   height: 30px;
   background-color: $white;
@@ -306,6 +307,7 @@
   &__container {
     max-width: 804px;
     width: 100%;
+    margin: 0 auto;
   }
 
   &__top {
@@ -320,6 +322,11 @@
     line-height: 24px;
     color: $dark-900;
     text-transform: uppercase;
+
+    &:focus {
+      outline: 4px solid #E0EDCF;
+    }
+
   }
 
   &__top-item--active {
@@ -352,7 +359,7 @@
     line-height: 1.6;
     letter-spacing: 0;
     color: #4F4F4F;
-    margin-left: 42px;
+    margin-left: 57px;
 
     p {
       padding-bottom: 28px;
@@ -381,7 +388,7 @@
   }
 
   &__content-wrapper {
-    margin-left: 42px;
+    margin-left: 35px;
   }
 
   &__content-title {
@@ -391,7 +398,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $dark-900;
-    margin-bottom: 48px;
+    margin-bottom: 47px;
   }
 
 }
@@ -414,9 +421,6 @@
     width: 100%;
   }
 
-  // чутка не помакету выходит отсуп. Пробывала в контейнер поместить product-items и ему задать больше ширину, но не реагирует. Пыталась ширину самого .slick-slide поменять, но перебивает автоматическая настройка слайдера в html. пробывала минусовыми марджинами тоже не то..
-
-  // не выходит задать отступ product-item, задавала обвертку product-item, не работает
   .product-item {
     &__info {
       display: flex;
@@ -469,15 +473,19 @@
     }
   }
 
+  .product-item__price {
+    padding: 10px 18px 11px 19px;
+  }
+
   .slick-arrow {
     position: absolute;
     top: -104px;
-    right: 0;
+    right: 91px;
     cursor: pointer;
   }
 
   .slick-next-three {
-    right: 91px;
+    right: 0px;
   }
 }
 
@@ -495,7 +503,7 @@
   &__content-top {
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
   }
 
   &__content-img {
@@ -503,7 +511,7 @@
     height: 70px;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 24px;
+    margin-right: 26px;
   }
 
   &__content-name {
@@ -513,13 +521,14 @@
   }
 
   &__content-date {
-    line-height: 24px;
+    line-height: 2.1;
     color: #4F4F4F;
   }
 
   &__content-star {
     margin-left: auto;
     margin-right: 0;
+    transform: translateX(-44px);
   }
 
   &__content-text {
@@ -568,7 +577,7 @@
   &__inner {
     display: flex;
     align-items: center;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
 
   &__messenger {
@@ -579,7 +588,7 @@
   &__textarea {
     width: 400px;
     height: 165px;
-    resize: none;
+    resize: vertical;
     border: 1px solid $silver-600;
     border-radius: 3px;
     @extend %opensans-400;
@@ -624,7 +633,7 @@
     display: flex;
     padding-left: 36px;
     cursor: pointer;
-    margin-bottom: 24px;
+    margin-bottom: 42px;
   }
 
   &__checkbox {
@@ -634,6 +643,12 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
     padding-left: 45px;
+  }
+
+  &__checkbox:checked+.comments-form__checkbox-style {
+    background-image: url('../images/icons/vector-filter.svg');
+    @extend %bg-img;
+    background-size: auto;
   }
 
   &__checkbox-style {
@@ -695,12 +710,12 @@
 }
 
 .slick-prev-two {
-  right: 0;
+  left: 20px;
   margin-right: 22px;
 }
 
 .slick-next-two {
-  left: 0;
+  right: 20px;
   margin-left: 22px;
 }
 
@@ -715,6 +730,66 @@
 .slick-disabled:hover svg rect {
   fill: rgba(255, 255, 255);
 }
+
+
+.mfp-image-holder .mfp-content {
+  background-color: $white;
+}
+
+.mfp-image-holder .mfp-close {
+  color: rgba(0, 0, 0, 0.15);
+  right: 20px;
+  top: 8px;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+
+// Подскажи пожалуйста как правильно зафиксировать стрелки, потому что при разных размерах экрана они прыгают очень и это не красиво. У меня в голове только один вариант - это при каждом размере экрана задавать им определенную позицию, но там получается очень много вариантов писать. Может есть вариант по проще?    это стрелки попапа, когда нажимаешь на картинку продукта 
+
+// подскажи как тут дотсы прикрепить? У меня не выходит
+.mfp-arrow {
+  width: 60px;
+  height: 60px;
+}
+
+.mfp-figure::after {
+  box-shadow: none;
+}
+
+img.mfp-img {
+  padding: 60px 300px 162px;
+  background-color: $white;
+}
+
+.mfp-arrow:before,
+.mfp-arrow:after {
+  border: transparent;
+}
+
+button.mfp-arrow::after {
+  content: '';
+  background-image: url('../images/icons/arrow-next.svg');
+  width: 21px;
+  height: 32px;
+  top: 0;
+  left: -560px;
+}
+
+.mfp-arrow::before {
+  content: '';
+  background-image: url('../images/icons/arrow-prev.svg');
+  width: 20px;
+  height: 32px;
+  top: 0;
+  left: 560px;
+  margin-left: 0;
+}
+
+.mfp-counter {
+  color: transparent;
+}
+
 
 
 
@@ -927,6 +1002,14 @@
       margin-bottom: 18px;
     }
 
+    &__box {
+      width: 100%;
+    }
+
+    &__input {
+      max-width: 100%;
+    }
+
     &__textarea {
       width: 100%;
     }
@@ -934,12 +1017,6 @@
     &__item:not(:last-child) {
       margin-bottom: 18px;
     }
-
-    // input с помощью position: absolute растягивается, но вылазит за контейнер. контейнер не помогае, марджины тоже. Надпись с лева думала с помощью display: flex; flex-direction: column; на верх закинуть, но вообще пропадает. Вобщем не вышло растянуть на всю ширину инпут
-    // &__input {
-    //   position: absolute;
-    // max-width: 100%;
-    // }
   }
 }
 
@@ -957,5 +1034,9 @@
 
   .product-tabs__top {
     justify-content: space-between;
+  }
+
+  .comments__content-star {
+    transform: translateX(0);
   }
 }
